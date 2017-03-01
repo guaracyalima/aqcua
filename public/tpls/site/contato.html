@@ -1,0 +1,140 @@
+<!--
+    ===================== 
+    CONTATO
+    =====================
+-->
+
+<div ng-controller="ContatoCtrl">
+    <section class="container mt-40">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-title">
+                    <h2>
+                        FALE CONOSCO
+                    </h2>
+                </div>
+            </div>
+            <!-- INFOR -->
+            <div class="contact_address col-md-4 mt-40">
+
+                <h2 class="heading-contact mb-20">
+                    Endereço:
+                </h2> 
+                <div class="contact_address">
+                    <div class="marker">
+                        <i class="icons-marker fa fa-home"></i>
+                    </div>
+                    <div class="text">
+                        <p>138 Atlantis Ln Kingsport Illinois 121164</p>
+                    </div>
+                </div>
+
+                <h2 class="heading-contact mb-20">
+                    Telefones:
+                </h2> 
+                <div class="contact_details">
+                    <div class="marker">
+                        <i class="icons-marker fa fa-mobile"></i>
+                    </div>
+                    <div class="text">
+                        <p>(69) 98482-3192</p>
+                    </div>
+                    <div class="marker">
+                        <i class="icons-marker fa fa-phone-square"></i>
+                    </div>
+                    <div class="text">
+                        <p>(69) 3481-2058</p>
+                    </div>
+                    <div class="marker">
+                        <i class="icons-marker fa fa-phone-square"></i>
+                    </div>
+                    <div class="text">
+                        <p>(69) 3481-1141</p>
+                    </div>
+                    <div class="marker">
+                        <i class="icons-marker fa fa-phone-square"></i>
+                    </div>
+                    <div class="text">
+                        <p>(69) 3481-1099</p>
+                    </div>
+                </div>
+                
+                <h2 class="heading-contact mb-20">
+                    E-mail:
+                </h2> 
+                <div class="contact_emailto">
+                    <div class="marker">
+                        <i class="icons-marker fa fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        <a href="mailto:mail@demolink.org">mail@demolink.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="col-md-8 mt-40">
+
+                <div class="contact_misc">
+                    <h2 class="heading-contact mb-20">
+                        Information:
+                    </h2>
+                    <div class="text pb-30">
+                        <p>
+                           Email us with any questions or inquiries or use our contact data.
+                        </p> 
+                    </div>
+                </div>
+                <div id="contact">
+                    <form class="mb-60"  novalidate="novalidate">
+                        <fieldset>
+                            <div class="row-fluid">
+                                <div class="control control-group-input col-md-4">
+                                    <div class="controls">
+                                        <input placeholder="Name" name="name" class="" type="text">
+                                    </div>
+                                </div>
+                                <div class="control control-group-input col-md-4">
+                                    <div class="controls">
+                                        <input placeholder="Email" name="email" class="" type="email">
+                                    </div>
+                                </div>
+                                <div class="control control-group-input col-md-4">
+                                    <div class="controls">
+                                        <input placeholder="Numero de contato" name="phone" class="" type="text">
+                                    </div>
+                                </div>
+                                <div class="control control-group-input col-md-12">
+                                    <div class="controls">
+                                        <textarea name="message" placeholder="Message" class="" style="overflow: hidden; overflow-wrap: break-word; height: 130px;" aria-required="true" data-original-title="Message">
+                                        </textarea>
+                                    </div>
+                                </div>
+            
+                                <div class="control control-group-button col-md-12">
+                                    <div class="controls">
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                        <button type="reset" class="btn btn-primary">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div><!-- /.FORM -->
+        
+        </div><!-- /.ROW -->
+    </section>
+<!--
+    ===================== 
+    MAPS
+    =====================
+-->
+    <section class="container-fluid pl-0 pr-0">
+        <div class="row-fluid">
+            <div dts-maps="" data-options="confMaps"></div>
+        </div>
+    </section>
+
+</div>

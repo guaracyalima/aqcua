@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 31, 2017, 9:27:05 PM
+    Author     : arthur 
+*/
+
+
+// Fonts
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+//@import "variables";
+
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//@import 'reset';
+
+@import "mangue/variables";
+@import "mangue/mixins";
+@import "mangue/reset";
+@import "mangue/buttons";
+@import "mangue/datatables";
+@import "mangue/angulartext";
+@import "mangue/jcrop";
+@import "mangue/popover";
+@import "mangue/breadcrumb";
+
+
+// Page App
+@import 'mangue/pages/main';
+@import 'mangue/pages/signin';

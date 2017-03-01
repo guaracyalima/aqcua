@@ -1,0 +1,33 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="ShopEspCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa fa-pencil-square-o"></i>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        <div class="panel-body">    
+            <div class="row">
+                <h3 class="text-center">Tem ceteza em excluir?</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="destroy( delId )" type="button" class="btn btn-danger btn-fill pull-left">Excluir</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

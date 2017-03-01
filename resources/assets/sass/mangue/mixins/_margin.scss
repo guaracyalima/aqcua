@@ -1,0 +1,32 @@
+
+@mixin margin( $type, $val, $mutiple ){
+
+    @if $type == left {
+        .ml-0 { margin-left: 0px !important; }
+        @for $i from 1 through $val {
+            .ml-#{$i} { margin-left: #{$mutiple * $i}px !important; }
+        }
+
+    } @else if $type == right {
+        .mr-0 { margin-right: 0px !important; }
+        @for $i from 1 through $val {
+            .mr-#{$i} { margin-right: #{$mutiple * $i}px !important; }
+        }
+    } @else if $type ==  top{
+        .mt-0 { margin-top: 0px !important; }
+        @for $i from 1 through $val {
+            .mt-#{$i} { margin-top: #{$mutiple * $i}px !important; }
+        }
+    } @else if $type ==  bottom{
+        .mb-0 { margin-bottom: 0px !important; }
+        @for $i from 1 through $val {
+            .mb-#{$i} { margin-bottom: #{$mutiple * $i}px !important; }
+        }
+    } @else {
+        .m-0 { margin: 0px !important; }
+        @for $i from 1 through $val {
+            .m-#{$i} { margin: #{$mutiple * $i}px !important; }
+        }
+    }
+
+}

@@ -1,0 +1,68 @@
+//== transition
+//
+
+@mixin transition($transition){
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+@mixin transition2Param($transition, $transition2){
+    -webkit-transition: $transition, $transition2;
+       -moz-transition: $transition, $transition2;
+        -ms-transition: $transition, $transition2;
+         -o-transition: $transition, $transition2;
+            transition: $transition, $transition2;
+}
+@mixin transition3Param($transition, $transition2,$transition3){
+    -webkit-transition: $transition, $transition2,$transition3;
+       -moz-transition: $transition, $transition2,$transition3;
+        -ms-transition: $transition, $transition2,$transition3;
+         -o-transition: $transition, $transition2,$transition3;
+            transition: $transition, $transition2,$transition3;
+}
+@mixin transitionCombination($transition){
+    -webkit-transition: -webkit-transform $transition;
+    transition: -webkit-transform $transition;
+    transition: transform $transition;
+    transition: transform $transition, -webkit-transform $transition;
+}
+@mixin transitionCombination2step( $type, $transition){
+    -webkit-transition: $type $transition, -webkit-transform $transition;
+     transition: $type $transition, -webkit-transform $transition;
+     transition: $type $transition, transform $transition;
+     transition: $type $transition, transform $transition, -webkit-transform $transition;
+}
+@mixin transition2step( $type, $transition){
+    -webkit-transition: $type $transition, -webkit-transform $transition;
+       -moz-transition: $type $transition, -moz-transform $transition;
+            transition: $type $transition, transform $transition;
+}
+@mixin translateY( $y ){
+    -webkit-transform: translateY( $y );
+       -moz-transform: translateY( $y );
+            transform: translateY( $y );
+}
+@mixin translateX( $x ){
+    -webkit-transform: translateX( $x );
+       -moz-transform: translateX( $x );
+            transform: translateX( $x );
+}
+@mixin translateZ( $z ){
+    -webkit-transform: translateZ( $z );
+       -moz-transform: translateZ( $z );
+            transform: translateZ( $z );
+}
+@mixin translateXY( $x, $y ){
+    -webkit-transform: translateX($x) translateY($y);
+       -moz-transform: translateX($x) translateY($y);
+        -ms-transform: translateX($x) translateY($y);
+            transform: translateX($x) translateY($y);
+}
+@mixin transform( $transform ){
+    -webkit-transform: $transform;
+       -moz-transform: $transform;
+        -ms-transform: $transform;
+            transform: $transform;
+}

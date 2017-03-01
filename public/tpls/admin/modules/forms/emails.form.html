@@ -1,0 +1,28 @@
+<div class="row" data-ng-repeat="emails in info.emails">
+    <div class="col-md-10">
+        <div class="row card ml-0 mr-0 pl-0 pr-0">
+            <div class="header"></div>
+            <div class="content">
+                <div class="form-group col-md-6">
+                    <label class="control-label text-left">E-mail:</label>
+                    <input type="email" class="form-control"  placeholder="Email" data-ng-model="emails.email">
+                    <input type="hidden" ng-model="emails.id" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label text-left">Descrição:</label>
+                    <input type="text" class="form-control"  placeholder="Comercial, Financeiro, Jurídico ..." data-ng-model="emails.desc">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-2">
+        <labelfor="Excluir">Excluir E-mail:</label>
+        <button data-ng-click="removeItemEmails($index)" class="btn btn-danger btn-addon delete-field-{{$index}}"><i class="fa fa-trash"></i>Deletar</button>            
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-xs-2 margin-left-15">
+        <label for="telefone">Novo Box:</label>
+        <button data-ng-click="cloneItemEmails()" class="btn btn-success btn-addon"><i class="fa fa-plus"></i>Adicionar</button>
+    </div>
+</div>

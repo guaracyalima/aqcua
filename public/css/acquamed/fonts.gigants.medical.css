@@ -1,0 +1,609 @@
+/**
+ * CSS STYLE
+ * @author Arthur Costa <root.arthur@gmail.com>
+ */
+@font-face {
+  font-family: 'gigants-medical';
+  src:  url('../../fonts/gigants/medical/gigants-medical.eot?tmw1qa');
+  src:  url('../../fonts/gigants/medical/gigants-medical.eot?tmw1qa#iefix') format('embedded-opentype'),
+    url('../../fonts/gigants/medical/gigants-medical.ttf?tmw1qa') format('truetype'),
+    url('../../fonts/gigants/medical/gigants-medical.woff?tmw1qa') format('woff'),
+    url('../../fonts/gigants/medical/gigants-medical.svg?tmw1qa#gigants-medical') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="gi-me-"], [class*=" gi-me-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gigants-medical' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gi-me {
+	display: inline-block;
+	font: normal normal normal 14px/1 gigants;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.gi-me-pills:before {
+  content: "\e900";
+}
+.gi-me-blood-sample-1:before {
+  content: "\e901";
+}
+.gi-me-pills-2:before {
+  content: "\e902";
+}
+.gi-me-molar-4:before {
+  content: "\e903";
+}
+.gi-me-teeth-6:before {
+  content: "\e904";
+}
+.gi-me-dental-floss:before {
+  content: "\e905";
+}
+.gi-me-lungs:before {
+  content: "\e906";
+}
+.gi-me-x-ray:before {
+  content: "\e907";
+}
+.gi-me-scalpel:before {
+  content: "\e908";
+}
+.gi-me-spinal-column:before {
+  content: "\e909";
+}
+.gi-me-eye:before {
+  content: "\e90a";
+}
+.gi-me-periodontal-scaler:before {
+  content: "\e90b";
+}
+.gi-me-finger:before {
+  content: "\e90c";
+}
+.gi-me-vagina-1:before {
+  content: "\e90d";
+}
+.gi-me-molar-8:before {
+  content: "\e90e";
+}
+.gi-me-otoscope:before {
+  content: "\e90f";
+}
+.gi-me-molar:before {
+  content: "\e910";
+}
+.gi-me-crutches:before {
+  content: "\e911";
+}
+.gi-me-implants-2:before {
+  content: "\e912";
+}
+.gi-me-lozenge:before {
+  content: "\e913";
+}
+.gi-me-syringe:before {
+  content: "\e914";
+}
+.gi-me-nose:before {
+  content: "\e915";
+}
+.gi-me-ear:before {
+  content: "\e916";
+}
+.gi-me-braces-2:before {
+  content: "\e917";
+}
+.gi-me-gum:before {
+  content: "\e918";
+}
+.gi-me-molar-6:before {
+  content: "\e919";
+}
+.gi-me-eye-drops:before {
+  content: "\e91a";
+}
+.gi-me-drugs-1:before {
+  content: "\e91b";
+}
+.gi-me-dental-drill:before {
+  content: "\e91c";
+}
+.gi-me-penis:before {
+  content: "\e91d";
+}
+.gi-me-teeth-9:before {
+  content: "\e91e";
+}
+.gi-me-molar-crown:before {
+  content: "\e91f";
+}
+.gi-me-pills-3:before {
+  content: "\e920";
+}
+.gi-me-ointment-1:before {
+  content: "\e921";
+}
+.gi-me-canine-1:before {
+  content: "\e922";
+}
+.gi-me-tweezers:before {
+  content: "\e923";
+}
+.gi-me-extraction:before {
+  content: "\e924";
+}
+.gi-me-ribbon:before {
+  content: "\e925";
+}
+.gi-me-tooth:before {
+  content: "\e926";
+}
+.gi-me-pill-1:before {
+  content: "\e927";
+}
+.gi-me-fit:before {
+  content: "\e928";
+}
+.gi-me-intestines:before {
+  content: "\e929";
+}
+.gi-me-drugs-2:before {
+  content: "\e92a";
+}
+.gi-me-liver:before {
+  content: "\e92b";
+}
+.gi-me-gum-1:before {
+  content: "\e92c";
+}
+.gi-me-breast-2:before {
+  content: "\e92d";
+}
+.gi-me-scissors:before {
+  content: "\e92e";
+}
+.gi-me-medical-records:before {
+  content: "\e92f";
+}
+.gi-me-brain-1:before {
+  content: "\e930";
+}
+.gi-me-braces:before {
+  content: "\e931";
+}
+.gi-me-kidney:before {
+  content: "\e932";
+}
+.gi-me-tonsils-tester:before {
+  content: "\e933";
+}
+.gi-me-records-2:before {
+  content: "\e934";
+}
+.gi-me-kneecap:before {
+  content: "\e935";
+}
+.gi-me-skull-1:before {
+  content: "\e936";
+}
+.gi-me-ointment:before {
+  content: "\e937";
+}
+.gi-me-x-ray-1:before {
+  content: "\e938";
+}
+.gi-me-pills-1:before {
+  content: "\e939";
+}
+.gi-me-vagina:before {
+  content: "\e93a";
+}
+.gi-me-teeth-3:before {
+  content: "\e93b";
+}
+.gi-me-implants:before {
+  content: "\e93c";
+}
+.gi-me-premolar-2:before {
+  content: "\e93d";
+}
+.gi-me-records-1:before {
+  content: "\e93e";
+}
+.gi-me-drugs-4:before {
+  content: "\e93f";
+}
+.gi-me-caries:before {
+  content: "\e940";
+}
+.gi-me-virus:before {
+  content: "\e941";
+}
+.gi-me-breast-3:before {
+  content: "\e942";
+}
+.gi-me-tooth-brush:before {
+  content: "\e943";
+}
+.gi-me-knee:before {
+  content: "\e944";
+}
+.gi-me-medicine:before {
+  content: "\e945";
+}
+.gi-me-tooth-1:before {
+  content: "\e946";
+}
+.gi-me-skeleton:before {
+  content: "\e947";
+}
+.gi-me-bacteria:before {
+  content: "\e948";
+}
+.gi-me-x-ray-2:before {
+  content: "\e949";
+}
+.gi-me-breast-1:before {
+  content: "\e94a";
+}
+.gi-me-first-aid-kit:before {
+  content: "\e94b";
+}
+.gi-me-teeth-10:before {
+  content: "\e94c";
+}
+.gi-me-syringe-3:before {
+  content: "\e94d";
+}
+.gi-me-molar-5:before {
+  content: "\e94e";
+}
+.gi-me-epidermis:before {
+  content: "\e94f";
+}
+.gi-me-bone:before {
+  content: "\e950";
+}
+.gi-me-articulation:before {
+  content: "\e951";
+}
+.gi-me-blood-transfusion:before {
+  content: "\e952";
+}
+.gi-me-teeth:before {
+  content: "\e953";
+}
+.gi-me-brain-3:before {
+  content: "\e954";
+}
+.gi-me-implants-3:before {
+  content: "\e955";
+}
+.gi-me-breast-4:before {
+  content: "\e956";
+}
+.gi-me-femur:before {
+  content: "\e957";
+}
+.gi-me-finger-2:before {
+  content: "\e958";
+}
+.gi-me-records:before {
+  content: "\e959";
+}
+.gi-me-optical:before {
+  content: "\e95a";
+}
+.gi-me-band-aid:before {
+  content: "\e95b";
+}
+.gi-me-cardiogram-1:before {
+  content: "\e95c";
+}
+.gi-me-lungs-1:before {
+  content: "\e95d";
+}
+.gi-me-arm-1:before {
+  content: "\e95e";
+}
+.gi-me-brain-2:before {
+  content: "\e95f";
+}
+.gi-me-implants-4:before {
+  content: "\e960";
+}
+.gi-me-notepad:before {
+  content: "\e961";
+}
+.gi-me-eye-drops-1:before {
+  content: "\e962";
+}
+.gi-me-lungs-2:before {
+  content: "\e963";
+}
+.gi-me-molar-2:before {
+  content: "\e964";
+}
+.gi-me-arm:before {
+  content: "\e965";
+}
+.gi-me-molar-3:before {
+  content: "\e966";
+}
+.gi-me-thermometer-1:before {
+  content: "\e967";
+}
+.gi-me-pills-4:before {
+  content: "\e968";
+}
+.gi-me-tooth-pliers:before {
+  content: "\e969";
+}
+.gi-me-mirror:before {
+  content: "\e96a";
+}
+.gi-me-microbe:before {
+  content: "\e96b";
+}
+.gi-me-heart:before {
+  content: "\e96c";
+}
+.gi-me-medicine-1:before {
+  content: "\e96d";
+}
+.gi-me-stomach:before {
+  content: "\e96e";
+}
+.gi-me-fat:before {
+  content: "\e96f";
+}
+.gi-me-thin:before {
+  content: "\e970";
+}
+.gi-me-molar-7:before {
+  content: "\e971";
+}
+.gi-me-blood-sample:before {
+  content: "\e972";
+}
+.gi-me-finger-1:before {
+  content: "\e973";
+}
+.gi-me-earbuds:before {
+  content: "\e974";
+}
+.gi-me-hammer:before {
+  content: "\e975";
+}
+.gi-me-tablets:before {
+  content: "\e976";
+}
+.gi-me-anesthesia:before {
+  content: "\e977";
+}
+.gi-me-electric-toothbrush:before {
+  content: "\e978";
+}
+.gi-me-thermometer:before {
+  content: "\e979";
+}
+.gi-me-tweezers-1:before {
+  content: "\e97a";
+}
+.gi-me-perfusion:before {
+  content: "\e97b";
+}
+.gi-me-teeth-2:before {
+  content: "\e97c";
+}
+.gi-me-breast:before {
+  content: "\e97d";
+}
+.gi-me-canine:before {
+  content: "\e97e";
+}
+.gi-me-pancreas:before {
+  content: "\e97f";
+}
+.gi-me-edema:before {
+  content: "\e980";
+}
+.gi-me-premolar-1:before {
+  content: "\e981";
+}
+.gi-me-cardiogram:before {
+  content: "\e982";
+}
+.gi-me-brain:before {
+  content: "\e983";
+}
+.gi-me-teeth-1:before {
+  content: "\e984";
+}
+.gi-me-teeth-4:before {
+  content: "\e985";
+}
+.gi-me-knee-1:before {
+  content: "\e986";
+}
+.gi-me-periodontal-scaler-2:before {
+  content: "\e987";
+}
+.gi-me-canine-3:before {
+  content: "\e988";
+}
+.gi-me-braces-1:before {
+  content: "\e989";
+}
+.gi-me-inhalator:before {
+  content: "\e98a";
+}
+.gi-me-caries-1:before {
+  content: "\e98b";
+}
+.gi-me-syringe-4:before {
+  content: "\e98c";
+}
+.gi-me-kidney-1:before {
+  content: "\e98d";
+}
+.gi-me-tooth-2:before {
+  content: "\e98e";
+}
+.gi-me-drugs:before {
+  content: "\e98f";
+}
+.gi-me-uterus:before {
+  content: "\e990";
+}
+.gi-me-premolar:before {
+  content: "\e991";
+}
+.gi-me-cardiogram-2:before {
+  content: "\e992";
+}
+.gi-me-drugs-3:before {
+  content: "\e993";
+}
+.gi-me-implants-1:before {
+  content: "\e994";
+}
+.gi-me-syringe-1:before {
+  content: "\e995";
+}
+.gi-me-teeth-7:before {
+  content: "\e996";
+}
+.gi-me-breast-implant:before {
+  content: "\e997";
+}
+.gi-me-canine-2:before {
+  content: "\e998";
+}
+.gi-me-stomach-1:before {
+  content: "\e999";
+}
+.gi-me-antibiotic:before {
+  content: "\e99a";
+}
+.gi-me-molar-1:before {
+  content: "\e99b";
+}
+.gi-me-periodontal-scaler-1:before {
+  content: "\e99c";
+}
+.gi-me-pill:before {
+  content: "\e99d";
+}
+.gi-me-iris:before {
+  content: "\e99e";
+}
+.gi-me-plastered-foot:before {
+  content: "\e99f";
+}
+.gi-me-dna:before {
+  content: "\e9a0";
+}
+.gi-me-teeth-8:before {
+  content: "\e9a1";
+}
+.gi-me-dropper:before {
+  content: "\e9a2";
+}
+.gi-me-stethoscope:before {
+  content: "\e9a3";
+}
+.gi-me-plastered-foot-1:before {
+  content: "\e9a4";
+}
+.gi-me-eye-1:before {
+  content: "\e9a5";
+}
+.gi-me-skull:before {
+  content: "\e9a6";
+}
+.gi-me-syringe-2:before {
+  content: "\e9a7";
+}
+.gi-me-wheelchair:before {
+  content: "\e9a8";
+}
+.gi-me-teeth-5:before {
+  content: "\e9a9";
+}
+.gi-me-hospital:before {
+  content: "\e9aa";
+}
+.gi-me-lungs2:before {
+  content: "\e9ab";
+}
+.gi-me-injury:before {
+  content: "\e9ac";
+}
+.gi-me-surgeon:before {
+  content: "\e9ad";
+}
+.gi-me-syringe2:before {
+  content: "\e9ae";
+}
+.gi-me-medicine-2:before {
+  content: "\e9af";
+}
+.gi-me-tooth2:before {
+  content: "\e9b0";
+}
+.gi-me-medicine2:before {
+  content: "\e9b1";
+}
+.gi-me-first-aid-kit2:before {
+  content: "\e9b2";
+}
+.gi-me-transfusion:before {
+  content: "\e9b3";
+}
+.gi-me-nurse:before {
+  content: "\e9b4";
+}
+.gi-me-band-aid2:before {
+  content: "\e9b5";
+}
+.gi-me-heart2:before {
+  content: "\e9b6";
+}
+.gi-me-medicine-12:before {
+  content: "\e9b7";
+}
+.gi-me-thermometer2:before {
+  content: "\e9b8";
+}
+.gi-me-medical-history:before {
+  content: "\e9b9";
+}
+.gi-me-ambulance:before {
+  content: "\e9ba";
+}
+.gi-me-pill2:before {
+  content: "\e9bb";
+}
+.gi-me-dna2:before {
+  content: "\e9bc";
+}
+.gi-me-wheelchair2:before {
+  content: "\e9bd";
+}

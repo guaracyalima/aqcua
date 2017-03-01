@@ -1,0 +1,86 @@
+footer{
+    width: 100%;
+    display: block;
+    float: left;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+
+    footer .sub-footer{
+        background: #1e2127;
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: block;
+        float: left;
+        border-bottom: 1px solid #181a1f;
+    }
+    footer .sub-footer .container{ 
+        display: block;
+        position: relative;
+        float: left;
+        padding-left: 260px;
+        width: 100%;
+        color: #858d91;
+        font-size: 1.3rem;
+    }
+    footer .foot-social {
+        list-style-type: none;
+        text-align: right;
+        padding-right: 60px;
+    }
+    footer .foot-social li {
+        display: inline-block;
+    }
+    footer .foot-social li a {
+        color: #858d91;
+        font-size: 1.8rem;
+        padding: 0 15px;
+        transition: .3s;
+    }
+    footer .copy-content a {
+        color: #E56310;
+        font-size: 1.3rem;
+        /*padding: 0 15px;*/
+        transition: .3s;
+        text-decoration: none;
+    }
+    footer .copy-content a:hover{
+        color: #ffc400;;
+    }
+
+}
+
+.scrollToTop {
+    background: #C0392B;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    display: none;
+    opacity: 0.5;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.scrollToTop i{
+    line-height: 3.7rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+.scrollToTop:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: #fff;
+}

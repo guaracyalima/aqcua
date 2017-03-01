@@ -1,0 +1,16 @@
+<!-- ======== INI HEADER ======== -->
+<header id="header-shop" ng-include='"tpls/site/acquafitness/header.html"'></header>
+<!-- ======== END HEADER ======== -->
+<!-- ======== INI NAV ======== -->
+<div dts-nav-fix="" dt-nav="navAcquaFitness" ng-hide="loading"></div>
+<!-- ======== END NAV ======== -->
+
+<!-- ======== INI MAIN ======== -->
+<main class="main-acquafitness" ng-class="{'visible': !loading}" ui-view></main>
+<!-- ======== END MAIN ======== -->
+
+<div class="clearfix"></div>
+
+<!-- ======== INT FOOTER ======== -->
+<footer id="footer-acquafitness" class="pt-0" ng-include="'tpls/site/acquafitness/fit-footer.html'"></footer>
+<!-- ======== END FOOTER ======== -->

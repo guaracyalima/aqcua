@@ -1,0 +1,12 @@
+<div class="row content-popover">
+    <a class="popover-close" ng-click="eq.popover = !eq.popover">
+        <i class="fa fa-times"></i>
+    </a>
+    <div class="team-img">
+        <img ng-src="{{eq.img}}" class="img-responsive"/>
+    </div>
+    <div class="team-content">
+       <h2>{{eq.name}}</h2>
+       <p ng-bind-html="eq.desc"></p>
+    </div>
+</div>

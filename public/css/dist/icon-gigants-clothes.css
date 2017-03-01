@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'gigants-clothes';
+  src: url("../../fonts/gigants-shop/gigants-clothes.eot?elzduk");
+  src: url("../../fonts/gigants-shop/gigants-clothes.eot?elzduk#iefix") format("embedded-opentype"), url("../../fonts/gigants-shop/gigants-clothes.ttf?elzduk") format("truetype"), url("../../fonts/gigants-shop/gigants-clothes.woff?elzduk") format("woff"), url("../../fonts/gigants-shop/gigants-clothes.svg?elzduk#gigants-clothes") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  content: ""; }
+[class^="gi-sh-"], [class*=" gi-sh-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gigants-clothes' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.gi-sh {
+  display: inline-block;
+  font: normal normal normal 14px/1 gigants-clothes;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.gi-sh-slim-fit-pants:before {
+  content: ""; }
+
+.gi-sh-sweatpants:before {
+  content: ""; }
+
+.gi-sh-bag:before {
+  content: ""; }
+
+.gi-sh-circle-skirt:before {
+  content: ""; }
+
+.gi-sh-pegged-pants:before {
+  content: ""; }
+
+.gi-sh-flat-shoes:before {
+  content: ""; }
+
+.gi-sh-leather-shoes:before {
+  content: ""; }
+
+.gi-sh-leather-gloves:before {
+  content: ""; }
+
+.gi-sh-ballets-flats:before {
+  content: ""; }
+
+.gi-sh-winter-hat:before {
+  content: ""; }
+
+.gi-sh-long-sleeveless-dress:before {
+  content: ""; }
+
+.gi-sh-draped-top:before {
+  content: ""; }
+
+.gi-sh-hobo-bag:before {
+  content: ""; }
+
+.gi-sh-cocktail-dress:before {
+  content: ""; }
+
+.gi-sh-vest:before {
+  content: ""; }
+
+.gi-sh-pants:before {
+  content: ""; }
+
+.gi-sh-oxford-wave-blazer:before {
+  content: ""; }
+
+.gi-sh-shutter-sunglasses:before {
+  content: ""; }
+
+.gi-sh-drees:before {
+  content: ""; }
+
+.gi-sh-shopping-bag:before {
+  content: ""; }
+
+.gi-sh-sweater:before {
+  content: ""; }
+
+.gi-sh-denim-jacket:before {
+  content: ""; }
+
+.gi-sh-mannequin:before {
+  content: ""; }
+
+.gi-sh-harem-pants:before {
+  content: ""; }
+
+.gi-sh-pilot-sunglasses:before {
+  content: ""; }
+
+.gi-sh-denim-shirt:before {
+  content: ""; }
+
+.gi-sh-boxer:before {
+  content: ""; }
+
+.gi-sh-dress-with-butterfly-sleeves:before {
+  content: ""; }
+
+.gi-sh-loafer:before {
+  content: ""; }
+
+.gi-sh-rain-boots:before {
+  content: ""; }
+
+.gi-sh-slit-skirt:before {
+  content: ""; }
+
+.gi-sh-boyfriend-low-jean:before {
+  content: ""; }
+
+.gi-sh-bow-tie:before {
+  content: ""; }
+
+.gi-sh-leggins:before {
+  content: ""; }
+
+.gi-sh-chiffon-suffle-blouse:before {
+  content: ""; }
+
+.gi-sh-sleepers:before {
+  content: ""; }
+
+.gi-sh-dress:before {
+  content: ""; }
+
+.gi-sh-padded-vest:before {
+  content: ""; }
+
+.gi-sh-watches:before {
+  content: ""; }
+
+.gi-sh-belt:before {
+  content: ""; }
+
+.gi-sh-bag-1:before {
+  content: ""; }
+
+.gi-sh-men-hat:before {
+  content: ""; }
+
+.gi-sh-sneakers:before {
+  content: ""; }
+
+.gi-sh-sneaker:before {
+  content: ""; }
+
+.gi-sh-cotton-cardigan:before {
+  content: ""; }
+
+.gi-sh-trench-coat:before {
+  content: ""; }
+
+.gi-sh-backpack:before {
+  content: ""; }
+
+.gi-sh-denim-shorts:before {
+  content: ""; }
+
+.gi-sh-collarless-cotton-shirt:before {
+  content: ""; }
+
+.gi-sh-briefcase:before {
+  content: ""; }
+
+.gi-sh-v-neck-shirt:before {
+  content: ""; }
+
+.gi-sh-men-socks:before {
+  content: ""; }
+
+.gi-sh-nylon-jacket:before {
+  content: ""; }
+
+.gi-sh-tank-top:before {
+  content: ""; }
+
+.gi-sh-hat:before {
+  content: ""; }
+
+.gi-sh-jewelry-set:before {
+  content: ""; }
+
+.gi-sh-hooded-jacket:before {
+  content: ""; }
+
+.gi-sh-barrel-handbag:before {
+  content: ""; }
+
+.gi-sh-long-bandeau-dress:before {
+  content: ""; }
+
+.gi-sh-peplum-top:before {
+  content: ""; }
+
+.gi-sh-jersey-blazer:before {
+  content: ""; }
+
+.gi-sh-tie:before {
+  content: ""; }
+
+.gi-sh-chinos-pants:before {
+  content: ""; }
+
+.gi-sh-leather-biker-jacket:before {
+  content: ""; }
+
+.gi-sh-flip-flops:before {
+  content: ""; }
+
+.gi-sh-leather-chelsea-boots:before {
+  content: ""; }
+
+.gi-sh-henley-shirt:before {
+  content: ""; }
+
+.gi-sh-off-the-shoulder-dress:before {
+  content: ""; }
+
+.gi-sh-scarf-on-hanger:before {
+  content: ""; }
+
+.gi-sh-chiffon-dress:before {
+  content: ""; }
+
+.gi-sh-jeans:before {
+  content: ""; }
+
+.gi-sh-lyocell-shirt-dress:before {
+  content: ""; }
+
+.gi-sh-lingerine-set:before {
+  content: ""; }
+
+.gi-sh-high-heels:before {
+  content: ""; }
+
+.gi-sh-ankle-boots:before {
+  content: ""; }
+
+.gi-sh-purse:before {
+  content: ""; }
+
+.gi-sh-messenger-bag:before {
+  content: ""; }
+
+.gi-sh-one-shoulder-dress:before {
+  content: ""; }
+
+.gi-sh-wool-boots:before {
+  content: ""; }
+
+.gi-sh-knit-hat-with-pom-pom:before {
+  content: ""; }
+
+.gi-sh-cotton-polo-shirt:before {
+  content: ""; }
+
+.gi-sh-peplum-skirt:before {
+  content: ""; }
+
+.gi-sh-oxford-wave-suit-pants:before {
+  content: ""; }
+
+.gi-sh-gladiator-sandal:before {
+  content: ""; }
+
+.gi-sh-leather-derby-shoe:before {
+  content: ""; }
+
+.gi-sh-jersey-wrap-dress:before {
+  content: ""; }
+
+.gi-sh-high-heel:before {
+  content: ""; }
+
+.gi-sh-cat-eye-glasses:before {
+  content: ""; }
+
+.gi-sh-peplum-skirt-1:before {
+  content: ""; }
+
+.gi-sh-bucket-bag:before {
+  content: ""; }
+
+.gi-sh-wool-gloves:before {
+  content: ""; }
+
+.gi-sh-t-shirt-with-design:before {
+  content: ""; }
+
+.gi-sh-formal-shirt:before {
+  content: ""; }
+
+.gi-sh-chino-shorts:before {
+  content: ""; }
+
+.gi-sh-platform-sandals:before {
+  content: ""; }
+
+.gi-sh-long-sleeves-t-shirt:before {
+  content: ""; }
+
+.gi-sh-tulle-skirt:before {
+  content: ""; }
+
+.gi-sh-jumpsuit:before {
+  content: ""; }
+
+.gi-sh-women-socks:before {
+  content: ""; }
+
+.gi-sh-flare-pants:before {
+  content: ""; }
+
+/*# sourceMappingURL=icon-gigants-clothes.css.map */

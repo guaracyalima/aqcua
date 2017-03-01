@@ -1,0 +1,232 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 31, 2017, 10:59:02 PM
+    Author     : arthur
+*/
+
+.body{
+    margin: 0px auto;
+    width: 100%;
+}
+
+// SIDE BAR
+.sidebar-wrapper{
+    .nav{
+        a{
+            cursor: pointer !important;
+        }
+        .dropdown{
+            &.open{
+                a{
+                    background: transparent !important;
+                }
+                .dropdown-menu{
+                    li{
+                        a{
+                            color: #5d5d5d;
+                            &:hover{
+                                color: #2c2b2b;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            a{
+                i{
+                    &.ic-small{
+                        font-size: 1.4rem;
+                        width: 30px;
+                        text-align: center;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            .dropdown-menu {
+                left: 10%;
+            }
+        }
+        
+        [data-toggle="collapse"] ~ div > ul > li > a {
+            padding-left: 60px;
+        }
+        .collapse{
+            height: 0px;
+            @include transition( all .35s linear );
+            &.in{
+                height: auto;
+            }
+        }
+
+    }
+    
+}
+.top-navbar{
+    li.dropdown {
+        a{
+            padding: 10px 15px;
+            &, i, p{
+                display: block;
+                position: relative;
+            }
+            i{
+                font-size: 24px;
+                float: left;
+                margin-right: 15px;
+                line-height: 30px;
+                width: 30px;
+                text-align: center; 
+                &.ic-small{
+                    font-size: 1.4rem;
+                    width: 30px;
+                    text-align: center;
+                    position: absolute;
+                    top: 15px;
+                    right: -10px;
+                }
+            }
+            p{
+                line-height: 30px;
+                text-align: center;
+            }
+            @media only screen and (min-width: 768px) {
+                & {
+                    min-width: 110px;
+                }
+                p{
+                    float: right;
+                    min-width: 60px;
+                    padding-right: 30px;
+                }
+
+            }
+            
+        }
+    }
+}
+.content-modules{
+    background: #F7F7F8;
+    padding: 1em;
+    /*border-radius: 3px;*/
+    /*box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.05);*/
+    .nv-modules{
+        .nav-pills{
+            width: 100%;
+            height: auto;
+            padding: 5px;
+            position: relative;
+            border-radius: 4px;
+            box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+            background-color: #FFFFFF;
+            margin-bottom: 30px;
+            li{
+                a{
+                    @include transition( all .4s ease-in-out );
+                }
+            }
+            li.titleActive{
+                p{
+                    background: rgba(120, 65, 186, 1);
+                    color: #fff;
+                    border-radius: 2px;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    font-weight: 400;
+                    position: relative;
+                    display: block;
+                    padding: 10px 15px; 
+                    text-align: center;
+                    margin-bottom: 1em;
+                    text-transform: uppercase;
+                }
+            }
+            li.active{
+                a{
+                    background: #E7E7F2;
+                    color: #393e41;
+                    border-radius: 2px;
+                }
+            }
+            a{
+                color: #393e41;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                font-weight: 400;
+                border-radius: 2px;
+                &:hover{
+                    background: #ECECED;
+                }
+            }
+        }
+    }
+}
+
+.main-panel{
+    overflow-x: hidden;
+}
+
+// FOOTER
+footer{
+    position: fixed;
+    bottom: 0;
+    width: calc( 100% - 260px);
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+// CONTENT NOT-PAD
+.content-notpad{
+    padding: 2px 2px 2px 2px !important;
+}
+/*.painel-line-title{
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}*/
+//  NAV MANGUE
+.nav-mangue{
+    border-radius: 0px;
+    li{
+        position: relative;
+        display: block;
+        &:first-of-type{
+            margin-top: 20px;
+        }
+        &.active{
+            a{
+                @include transition( all 150ms ease-in );
+                background: $new-purple-dark;
+                color: $white-color;
+                &:hover{
+                    background: $new-purple;
+                    color: $white-color;
+                }
+            }
+        }
+        a{
+            width: 100%;
+            color: $black-color;
+            /*margin: 5px 15px;*/
+            opacity: .86;
+            border-radius: 3px;
+            display: block;
+            cursor: pointer !important;
+            @include transition( all 150ms ease-in );
+            &:hover{
+                background: $light-gray;
+            }
+        }
+        
+    }
+}
+
+
+.breadcrumb-admin{}
+

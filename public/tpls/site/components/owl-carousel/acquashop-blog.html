@@ -1,0 +1,26 @@
+<div class="owl-carousel owl-theme" ng-controller="HomeAcquaShopCtrl">
+    <div class="item" ng-repeat="ow in carousel">
+        <div class="box-news">
+            <div class="news-img">
+                <a ng-if="ow.img" ng-click="showBlog(ow.id)">
+                    <img class="img-responsive" ng-src="{{ow.img}}" alt="{{ow.title}}"/>
+                    <em></em>
+                </a>
+                <a ng-if="ow.video" class="owl-video"  href="{{ow.video}}">
+                    <em></em>
+                </a>
+                <div class="metadata news-day"><span>{{ow.post_day}}</span></div>
+                <div class="metadata news-year"><span>{{ow.post_year}}</span></div>
+            </div>
+            <h4 ng-bind-html="ow.title"></h4>
+            <p ng-bind-html="ow.desc"></p>
+            <div class="footer-news">
+                <div class="foot-meta">
+                    <span class="news-author"><i class="fa fa-user"></i>{{ow.author}}</span>
+                    <!--<span class="comments"><i class="fa fa-comments"></i>13</span>-->
+                    <span class="readmore"><a ng-click="showBlog(ow.id)">Leia mais</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

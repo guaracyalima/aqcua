@@ -1,0 +1,64 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="ShopCategoriasCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa fa-pencil-square-o"></i>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        
+        <!-- Horizontal Form -->
+        <form name="categoriasForm" novalidate>
+            <div class="panel-body">    
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-xs-12">
+                        <div class="form-group" ng-class="{ 'error' : categoriasForm.categorias.title.$invalid && !categoriasForm.categorias.title.$pristine }">
+                            <label>Categoria:</label>
+                            <input type="text" class="form-control"  placeholder="Nome da categoria ..." ng-model="categorias.title" required>
+                            <input type="hidden" ng-model="categorias.id" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>Icon</label>
+                        <div class="input-group popover-icon">
+                            <a class="btn btn-default" data-ng-click="box.popover = !box.popover" >
+                                <i class="fa" ng-class="!categorias.icon ? 'fa-archive' : categorias.icon"></i>
+                            </a>
+                            <div class="iconpicker-popover"
+                                        uib-popover-template="'tpls/admin/components/modules/popover/categorias.pop.html'"
+                                        popover-placement="bottom"
+                                        popover-trigger="'focus'"
+                                        popover-is-open="box.popover"
+                            ></div>
+                        </div>
+                        <input type="hidden" name="typeIcon" data-ng-model="categorias.icon" ng-model-options="{ debounce: 1000 }">
+                    </div>
+
+
+                    <div class="form-group col-md-12">
+                        <label class="control-label text-left">Descrição da categoria:</label>
+                        <div text-angular data-ng-model="categorias.desc" ta-toolbar="taConf" ta-toolbar-button-class="btn-fill btn-sm" class="ta-min-height-150 ta-height-150"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="save()" type="button" class="btn btn-success btn-fill pull-left" ng-disabled="servicosForm.$invalid">Salvar</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

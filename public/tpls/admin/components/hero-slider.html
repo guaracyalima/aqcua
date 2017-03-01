@@ -1,0 +1,98 @@
+<ul class="cd-hero-slider autoplay">
+
+    <li ng-repeat="item in slider" 
+        ng-class="{
+                    'selected'  : $index == 0,
+                    'type1'     : item.type == 1, 
+                    'type2'     : item.type == 2,
+                    'type3'     : item.type == 3,
+                    'img-full'  : item.type == 4
+                  }"
+    >
+        <!--
+        ==========================
+            TIPO 01 
+        ========================== -->
+        <div ng-if="item.type == 1" class="cd-full-width">
+            <h2>{{item.title}}</h2>
+            <p ng-bind-html="item.content"></p>
+            <a class="cd-btn"
+               ng-repeat="lk in item.link"
+               ng-class="{'secondary': lk.secondary}" 
+               href="{{lk.uri}}" class="cd-btn">
+               {{lk.title}}
+            </a>
+        </div>
+
+        <!--
+        ==========================
+            TIPO 02 
+        ========================== -->
+        <div ng-if="item.type == 2" class="cd-half-width">
+            <h2>{{item.title}}</h2>
+            <p ng-bind-html="item.content"></p>
+            <a class="cd-btn"
+               ng-repeat="lk in item.link"
+               ng-class="{'secondary': lk.secondary}" 
+               href="{{lk.uri}}" class="cd-btn">
+               {{lk.title}}
+            </a>
+        </div>
+        <div ng-if="item.type == 2" class="cd-half-width cd-img-container">
+            <img ng-src="{{item.img}}" alt="{{item.title}}">
+        </div>
+
+        <!--
+        ==========================
+            TIPO 03 
+        ========================== -->
+        <div ng-if="item.type == 3" class="cd-half-width cd-img-container">
+            <img ng-src="{{item.img}}" alt="{{item.title}}">
+        </div>
+        <div ng-if="item.type == 3" class="cd-half-width">
+            <h2>{{item.title}}</h2>
+            <p ng-bind-html="item.content"></p>
+            <a class="cd-btn"
+               ng-repeat="lk in item.link"
+               ng-class="{'secondary': lk.secondary}" 
+               href="{{lk.uri}}" class="cd-btn">
+               {{lk.title}}
+            </a>
+        </div>
+        <!--
+        ==========================
+            TIPO 04 
+        ========================== -->
+        <div ng-if="item.type == 4" class="cd-full-width" ng-style="{'background-image': 'url( {{item.img}} )'}">
+            <hgroup>
+                <h2>{{item.title}}</h2>
+                <p ng-bind-html="item.content"></p>
+                <a class="cd-btn"
+                   ng-repeat="lk in item.link"
+                   ng-class="{'secondary': lk.secondary}" 
+                   href="{{lk.uri}}" class="cd-btn">
+                   {{lk.title}}
+                </a>
+            </hgroup>
+        </div> <!-- .cd-full-width -->
+
+    </li><!-- li -->
+ </ul> <!-- .cd-hero-slider -->
+
+<!--
+==========================
+    NAV
+========================== -->
+<div class="cd-slider-nav">
+    <nav>
+        <span class="cd-marker item-1"></span>
+        <ul>
+            <li ng-repeat="sl in slider"   ng-class="{'selected': $index == 0}">
+                <a href="#0">
+                    <i ng-class="sl.nav.icon"></i>
+                    {{sl.nav.title}}
+                </a>
+            </li>
+        </ul>
+    </nav> 
+</div> <!-- .cd-slider-nav -->

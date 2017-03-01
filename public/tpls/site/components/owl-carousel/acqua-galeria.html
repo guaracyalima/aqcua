@@ -1,0 +1,22 @@
+<div class="owl-carousel owl-theme">
+    <div class="item" ng-repeat="ow in carousel">
+       <div>
+       	   <img ng-src="{{ow.img}}" class="img-responsive" alt="{{ow.title}}">
+       </div> 
+       <div class="text-overlay">
+       	   <h2>texto</h2>
+       </div>
+    </div>
+</div>
+
+<style type="text/css">
+
+	.text-overlay h2{
+		color:#303030;
+		font-size:18px;
+		display:block;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+</style>

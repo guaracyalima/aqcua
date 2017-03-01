@@ -1,0 +1,50 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="HomeAcquaMedCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa newspaper-o"></i> 
+                    {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 content-vd">
+                <img ng-src="{{team.img}}" class="img-responsive" alt="{{team.title}}" ng-if="team.img"/>
+                <!--<div id="ytplayer" ng-init="getPlayVideo(team.video)" ng-if="team.video"></div>-->
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="page-header">
+
+                    <h2 class="mb-10">
+                        <strong ng-if="team.initials" ng-bind-html="team.initials"></strong>
+                        {{team.name}}
+                    </h2>
+
+                    <h3 class="mb-10" ng-if="team.role">{{team.role}} </h3>
+                    <h4 class="mb-10" ng-if="team.crm">CRM: {{team.crm}}</h4>
+                </div>
+                <p ng-bind-html="team.desc" class="mb-20"></p>
+                
+                <p ng-if="team.author">
+                    Autor: <strong>{{team.author}}</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

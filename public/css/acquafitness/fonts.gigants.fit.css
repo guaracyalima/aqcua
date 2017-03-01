@@ -1,0 +1,424 @@
+/**
+ * CSS STYLE
+ * @author Arthur Costa <root.arthur@gmail.com>
+ */
+ @font-face {
+  font-family: 'gigants-fitness';
+  src:  url('../../fonts/gigants/fitness/gigants-fitness.eot?nsi6pn');
+  src:  url('../../fonts/gigants/fitness/gigants-fitness.eot?nsi6pn#iefix') format('embedded-opentype'),
+    url('../../fonts/gigants/fitness/gigants-fitness.ttf?nsi6pn') format('truetype'),
+    url('../../fonts/gigants/fitness/gigants-fitness.woff?nsi6pn') format('woff'),
+    url('../../fonts/gigants/fitness/gigants-fitness.svg?nsi6pn#gigants-fitness') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="gi-fit-"], [class*=" gi-fit-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gigants-fitness' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gi-fit {
+	display: inline-block;
+	font: normal normal normal 14px/1 gigants;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.gi-fit-judo-fighter:before {
+  content: "\e97a";
+}
+.gi-fit-karate:before {
+  content: "\e97b";
+}
+.gi-fit-karate-1:before {
+  content: "\e97c";
+}
+.gi-fit-karate-fighter:before {
+  content: "\e97d";
+}
+.gi-fit-karate-high-kick:before {
+  content: "\e97e";
+}
+.gi-fit-karate-master:before {
+  content: "\e97f";
+}
+.gi-fit-aerobica:before {
+  content: "\e900";
+}
+.gi-fit-circuito-kids:before {
+  content: "\e901";
+}
+.gi-fit-dança:before {
+  content: "\e902";
+}
+.gi-fit-fisioterapia:before {
+  content: "\e903";
+}
+.gi-fit-pilates:before {
+  content: "\e904";
+}
+.gi-fit-yoga:before {
+  content: "\e905";
+}
+.gi-fit-people:before {
+  content: "\e906";
+}
+.gi-fit-people-1:before {
+  content: "\e907";
+}
+.gi-fit-people-2:before {
+  content: "\e908";
+}
+.gi-fit-people-3:before {
+  content: "\e909";
+}
+.gi-fit-people-4:before {
+  content: "\e90a";
+}
+.gi-fit-people-5:before {
+  content: "\e90b";
+}
+.gi-fit-people-6:before {
+  content: "\e90c";
+}
+.gi-fit-people-7:before {
+  content: "\e90d";
+}
+.gi-fit-people-8:before {
+  content: "\e90e";
+}
+.gi-fit-people-9:before {
+  content: "\e90f";
+}
+.gi-fit-people2:before {
+  content: "\e910";
+}
+.gi-fit-people-12:before {
+  content: "\e911";
+}
+.gi-fit-people-22:before {
+  content: "\e912";
+}
+.gi-fit-people-32:before {
+  content: "\e913";
+}
+.gi-fit-people-42:before {
+  content: "\e914";
+}
+.gi-fit-two:before {
+  content: "\e915";
+}
+.gi-fit-alarm-clock:before {
+  content: "\e916";
+}
+.gi-fit-apple:before {
+  content: "\e917";
+}
+.gi-fit-athlete:before {
+  content: "\e918";
+}
+.gi-fit-beef:before {
+  content: "\e919";
+}
+.gi-fit-bicycle:before {
+  content: "\e91a";
+}
+.gi-fit-blender:before {
+  content: "\e91b";
+}
+.gi-fit-broccoli:before {
+  content: "\e91c";
+}
+.gi-fit-calendar:before {
+  content: "\e91d";
+}
+.gi-fit-check-list:before {
+  content: "\e91e";
+}
+.gi-fit-chronometer:before {
+  content: "\e91f";
+}
+.gi-fit-dumbbell:before {
+  content: "\e920";
+}
+.gi-fit-dumbbell-1:before {
+  content: "\e921";
+}
+.gi-fit-energy-drink:before {
+  content: "\e922";
+}
+.gi-fit-fast-food:before {
+  content: "\e923";
+}
+.gi-fit-fish:before {
+  content: "\e924";
+}
+.gi-fit-forest:before {
+  content: "\e925";
+}
+.gi-fit-goal:before {
+  content: "\e926";
+}
+.gi-fit-hand-grip:before {
+  content: "\e927";
+}
+.gi-fit-jumping-rope:before {
+  content: "\e928";
+}
+.gi-fit-kettlebell:before {
+  content: "\e929";
+}
+.gi-fit-lotus-position:before {
+  content: "\e92a";
+}
+.gi-fit-lotus-position-1:before {
+  content: "\e92b";
+}
+.gi-fit-mat:before {
+  content: "\e92c";
+}
+.gi-fit-measuring-tape:before {
+  content: "\e92d";
+}
+.gi-fit-milk:before {
+  content: "\e92e";
+}
+.gi-fit-milkshake:before {
+  content: "\e92f";
+}
+.gi-fit-muscle:before {
+  content: "\e930";
+}
+.gi-fit-music-player:before {
+  content: "\e931";
+}
+.gi-fit-no-drinks:before {
+  content: "\e932";
+}
+.gi-fit-pilates2:before {
+  content: "\e933";
+}
+.gi-fit-protein:before {
+  content: "\e934";
+}
+.gi-fit-pulse:before {
+  content: "\e935";
+}
+.gi-fit-rest:before {
+  content: "\e936";
+}
+.gi-fit-runner:before {
+  content: "\e937";
+}
+.gi-fit-salad:before {
+  content: "\e938";
+}
+.gi-fit-slim-down:before {
+  content: "\e939";
+}
+.gi-fit-smartphone:before {
+  content: "\e93a";
+}
+.gi-fit-smartwatch:before {
+  content: "\e93b";
+}
+.gi-fit-sport-bag:before {
+  content: "\e93c";
+}
+.gi-fit-sport-shoe:before {
+  content: "\e93d";
+}
+.gi-fit-stationary-bike:before {
+  content: "\e93e";
+}
+.gi-fit-studying:before {
+  content: "\e93f";
+}
+.gi-fit-swimming:before {
+  content: "\e940";
+}
+.gi-fit-tea:before {
+  content: "\e941";
+}
+.gi-fit-treadmill:before {
+  content: "\e942";
+}
+.gi-fit-water:before {
+  content: "\e943";
+}
+.gi-fit-watermelon:before {
+  content: "\e944";
+}
+.gi-fit-weighing-scale:before {
+  content: "\e945";
+}
+.gi-fit-yin-yang:before {
+  content: "\e946";
+}
+.gi-fit-yoga-ball:before {
+  content: "\e947";
+}
+.gi-fit-man-doing-pushups:before {
+  content: "\e948";
+}
+.gi-fit-man-flexing-knees-with-arms-up:before {
+  content: "\e949";
+}
+.gi-fit-man-flexing-waist:before {
+  content: "\e94a";
+}
+.gi-fit-man-flexing-waist-down:before {
+  content: "\e94b";
+}
+.gi-fit-man-flexing-waist-to-feet:before {
+  content: "\e94c";
+}
+.gi-fit-man-laying-on-his-back-with-his-knees-on-his-chest:before {
+  content: "\e94d";
+}
+.gi-fit-man-on-floor-flexing-backwards:before {
+  content: "\e94e";
+}
+.gi-fit-man-on-his-knees:before {
+  content: "\e94f";
+}
+.gi-fit-man-on-his-knees-stretching-arms-on-floor:before {
+  content: "\e950";
+}
+.gi-fit-man-on-his-knees-stretching-back:before {
+  content: "\e951";
+}
+.gi-fit-man-on-his-knees-stretching-side-view:before {
+  content: "\e952";
+}
+.gi-fit-man-on-his-knees-with-head-on-floor:before {
+  content: "\e953";
+}
+.gi-fit-man-on-squat-position-turning-waist:before {
+  content: "\e954";
+}
+.gi-fit-man-on-the-floor-flexing-body:before {
+  content: "\e955";
+}
+.gi-fit-man-sitting-on-the-floor-stretching-leg-and-waist:before {
+  content: "\e956";
+}
+.gi-fit-man-squatting:before {
+  content: "\e957";
+}
+.gi-fit-man-standing-on-his-right-leg-stretching-left-leg-and-right-arm:before {
+  content: "\e958";
+}
+.gi-fit-man-standing-on-one-leg:before {
+  content: "\e959";
+}
+.gi-fit-man-standing-on-right-leg-stretching-leg-and-arms:before {
+  content: "\e95a";
+}
+.gi-fit-man-stretching-back:before {
+  content: "\e95b";
+}
+.gi-fit-man-stretching-both-arms-and-legs:before {
+  content: "\e95c";
+}
+.gi-fit-man-stretching-left-leg-and-bending-waist:before {
+  content: "\e95d";
+}
+.gi-fit-man-stretching-leg-and-arms:before {
+  content: "\e95e";
+}
+.gi-fit-man-stretching-legs-and-flexing-body:before {
+  content: "\e95f";
+}
+.gi-fit-man-stretching-legs-and-waist:before {
+  content: "\e960";
+}
+.gi-fit-man-supporting-himself-on-one-arm-and-stretching-right-arm:before {
+  content: "\e961";
+}
+.gi-fit-man-up-flexing-to-right:before {
+  content: "\e962";
+}
+.gi-fit-woman-bending-waist-to-feet-with-stretching-leg:before {
+  content: "\e963";
+}
+.gi-fit-woman-flexing-body:before {
+  content: "\e964";
+}
+.gi-fit-woman-flexing-waist-to-feet:before {
+  content: "\e965";
+}
+.gi-fit-woman-honding-her-body-with-arms-and-legs:before {
+  content: "\e966";
+}
+.gi-fit-woman-laying-down-lifting-head:before {
+  content: "\e967";
+}
+.gi-fit-woman-laying-on-the-floor-stretching-right-leg:before {
+  content: "\e968";
+}
+.gi-fit-woman-lifting-left-leg:before {
+  content: "\e969";
+}
+.gi-fit-woman-on-her-knees-looking-up:before {
+  content: "\e96a";
+}
+.gi-fit-woman-on-her-knees-stretching-arms:before {
+  content: "\e96b";
+}
+.gi-fit-woman-on-lotus-position-front-view:before {
+  content: "\e96c";
+}
+.gi-fit-woman-sitting-on-the-floor-stretching-head:before {
+  content: "\e96d";
+}
+.gi-fit-woman-sitting-on-the-floor-stretching-left-leg:before {
+  content: "\e96e";
+}
+.gi-fit-woman-standing-on-her-arms:before {
+  content: "\e96f";
+}
+.gi-fit-woman-standing-on-one-leg-lifting-left-leg:before {
+  content: "\e970";
+}
+.gi-fit-woman-standing-on-right-leg-with-left-leg-up:before {
+  content: "\e971";
+}
+.gi-fit-woman-stretching-and-flexing-legs-with-arms-up:before {
+  content: "\e972";
+}
+.gi-fit-woman-stretching-arms-and-flexing-legs:before {
+  content: "\e973";
+}
+.gi-fit-woman-stretching-back:before {
+  content: "\e974";
+}
+.gi-fit-woman-stretching-her-body-on-the-floor:before {
+  content: "\e975";
+}
+.gi-fit-woman-stretching-left-leg:before {
+  content: "\e976";
+}
+.gi-fit-woman-stretching-on-floor:before {
+  content: "\e977";
+}
+.gi-fit-woman-upside-down-stretching-body:before {
+  content: "\e978";
+}
+.gi-fit-woman-with-left-leg-up-and-flexed:before {
+  content: "\e979";
+}

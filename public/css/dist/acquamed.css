@@ -1,0 +1,1547 @@
+/**
+ * CSS STYLE
+ * @author Arthur Costa <root.arthur@gmail.com>
+*/
+@-webkit-keyframes qty-enter {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); } }
+@keyframes qty-enter {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); } }
+@-webkit-keyframes qty-leave {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-100%);
+    transform: translateX(-50%) translateY(-100%); } }
+@keyframes qty-leave {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-100%);
+    transform: translateX(-50%) translateY(-100%); } }
+@-webkit-keyframes item-move-up-mobile {
+  0% {
+    padding-top: 70px; }
+  100% {
+    padding-top: 0px; } }
+@keyframes item-move-up-mobile {
+  0% {
+    padding-top: 70px; }
+  100% {
+    padding-top: 0px; } }
+@-webkit-keyframes item-move-up {
+  0% {
+    padding-top: 104px; }
+  100% {
+    padding-top: 0px; } }
+@keyframes item-move-up {
+  0% {
+    padding-top: 104px; }
+  100% {
+    padding-top: 0px; } }
+@-webkit-keyframes item-move-down-mobile {
+  0% {
+    padding-top: 0px; }
+  100% {
+    padding-top: 70px; } }
+@keyframes item-move-down-mobile {
+  0% {
+    padding-top: 0px; }
+  100% {
+    padding-top: 70px; } }
+@-webkit-keyframes item-move-down {
+  0% {
+    padding-top: 0px; }
+  100% {
+    padding-top: 104px; } }
+@keyframes item-move-down {
+  0% {
+    padding-top: 0px; }
+  100% {
+    padding-top: 104px; } }
+@-webkit-keyframes item-slide-out {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@keyframes item-slide-out {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@-webkit-keyframes item-slide-in {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  0% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@keyframes item-slide-in {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  0% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@-webkit-keyframes item-slide-in {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  0% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@keyframes item-slide-in {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; }
+  0% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0; } }
+@-webkit-keyframes move-margin {
+  0% {
+    margin: 25% 0% 0 25%; }
+  50% {
+    margin: 25% 20% 0 25%; }
+  100% {
+    margin: 25% 0% 0 25%; } }
+@keyframes move-margin {
+  0% {
+    margin: 25% 0% 0 25%; }
+  50% {
+    margin: 25% 20% 0 25%; }
+  100% {
+    margin: 25% 0% 0 25%; } }
+/*
+    RESET
+*/
+.main-acquamed {
+  visibility: hidden; }
+
+.main-acquamed.visible {
+  visibility: visible; }
+
+.main-acquamed .content-carousel {
+  padding-top: 105px; }
+
+.main-acquamed {
+  position: relative;
+  height: 100%; }
+
+.text-content {
+  font-size: 15px;
+  color: #6d6d6d;
+  line-height: 1.6em; }
+
+@media (max-width: 768px) {
+  .main-acquamed .content-carousel {
+    padding-top: 50px; } }
+#acquaMed {
+  /*
+      PAGINAS
+  */
+  /*
+      WRAP
+  */ }
+  #acquaMed .owl-carousel .owl-nav {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'fontAwesome'; }
+    #acquaMed .owl-carousel .owl-nav.disabled {
+      /* BUG PLUGIN*/
+      display: block !important; }
+    #acquaMed .owl-carousel .owl-nav .owl-prev {
+      position: relative;
+      float: right; }
+    #acquaMed .owl-carousel .owl-nav .owl-next {
+      position: relative;
+      float: left; }
+    #acquaMed .owl-carousel .owl-nav .owl-prev,
+    #acquaMed .owl-carousel .owl-nav .owl-next {
+      background: #1E8BC3 !important;
+      color: #FFFFFF !important;
+      border-radius: 0px !important; }
+      #acquaMed .owl-carousel .owl-nav .owl-prev:hover,
+      #acquaMed .owl-carousel .owl-nav .owl-next:hover {
+        opacity: .8; }
+      #acquaMed .owl-carousel .owl-nav .owl-prev i,
+      #acquaMed .owl-carousel .owl-nav .owl-next i {
+        font-size: 1.8rem;
+        padding: .4em; }
+      #acquaMed .owl-carousel .owl-nav .owl-prev.disabled,
+      #acquaMed .owl-carousel .owl-nav .owl-next.disabled {
+        visibility: hidden; }
+  #acquaMed #subhome, #acquaMed #empresa, #acquaMed #sobre,
+  #acquaMed #especialidades, #acquaMed #servicos, #acquaMed #equipe, #acquaMed #contato {
+    padding-bottom: 90px;
+    float: left;
+    width: 100%; }
+    #acquaMed #subhome .box-content, #acquaMed #empresa .box-content, #acquaMed #sobre .box-content,
+    #acquaMed #especialidades .box-content, #acquaMed #servicos .box-content, #acquaMed #equipe .box-content, #acquaMed #contato .box-content {
+      padding-top: 15px;
+      line-height: 1.6em; }
+  #acquaMed #subhome {
+    padding-top: 90px; }
+    #acquaMed #subhome .box-title {
+      margin-top: 0px;
+      color: #1E8BC3;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 1.2em; }
+      #acquaMed #subhome .box-title span {
+        color: #46494c;
+        font-weight: 400; }
+  #acquaMed #empresa {
+    padding-bottom: 0px; }
+    #acquaMed #empresa .box-text {
+      padding: 30px 50px; }
+      #acquaMed #empresa .box-text h2, #acquaMed #empresa .box-text h4 {
+        font-weight: 500;
+        line-height: 1.1; }
+      #acquaMed #empresa .box-text h2 {
+        font-size: 30px;
+        text-transform: inherit;
+        margin: 0 0 20px 0; }
+        #acquaMed #empresa .box-text h2 span {
+          color: #1E8BC3; }
+      #acquaMed #empresa .box-text h4 {
+        margin-top: 25px;
+        font-size: 18px; }
+      #acquaMed #empresa .box-text p {
+        padding-top: 10px;
+        padding: 15px 0;
+        margin: 0px;
+        line-height: 28px;
+        padding-bottom: 10px; }
+        #acquaMed #empresa .box-text p span.caps {
+          display: block;
+          color: #FFFFFF;
+          font-size: 23px;
+          text-align: center;
+          background-color: #1E8BC3;
+          float: left;
+          margin: 7px 15px 0 0;
+          padding: 18px 19px; }
+        #acquaMed #empresa .box-text p.line {
+          padding-bottom: 25px;
+          border-bottom: 1px dashed #1E8BC3;
+          padding-right: 10px;
+          line-height: 24px; }
+  #acquaMed .wrap-box1, #acquaMed .wrap-box2, #acquaMed .wrap-box3
+  .wrap-box4, #acquaMed .wrap-box5, #acquaMed .wrap-box6 {
+    transition-duration: 0.3s; }
+  #acquaMed .wrap-box1 h3 {
+    font-size: 20px;
+    color: #46494c;
+    margin: 0px 0 10px 0;
+    line-height: 1.5em;
+    padding: 4px 0 10px 0;
+    border-bottom: 1px solid #1E8BC3;
+    padding-left: 100px;
+    position: relative;
+    border-radius: 0 0 0 15px;
+    font-weight: 400; }
+  #acquaMed .wrap-box1 h3 i {
+    height: 70px;
+    width: 70px;
+    background: #1E8BC3;
+    color: #FFFFFF;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    border-radius: 15px 15px 0 15px; }
+  #acquaMed .wrap-box1 h3 span {
+    font-size: 16px;
+    color: #6f6f6f; }
+  #acquaMed .wrap-box2 {
+    text-align: center;
+    border: 1px solid #e3e9e9;
+    padding: 15px;
+    border-radius: 6px; }
+  #acquaMed .wrap-box2 .icon-box2 {
+    position: relative;
+    padding-bottom: 15px; }
+  #acquaMed .wrap-box2 .icon-box2 i {
+    color: #1E8BC3;
+    font-size: 60px;
+    margin: 0px;
+    position: relative;
+    z-index: 10; }
+  #acquaMed .wrap-box2 .icon-box2 span {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 9; }
+  #acquaMed .wrap-box2 h4 {
+    position: relative;
+    display: block;
+    height: auto;
+    color: #656769;
+    font-size: 19px;
+    margin-top: 0px;
+    padding-top: inherit;
+    padding-bottom: 15px;
+    font-weight: inherit;
+    text-transform: uppercase; }
+    #acquaMed .wrap-box2 h4::before {
+      display: block;
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+      content: '';
+      width: 100px;
+      border-bottom: none; }
+  #acquaMed .wrap-box2 p {
+    text-align: left;
+    padding: 1.2em;
+    line-height: 2.1rem;
+    font-weight: inherit; }
+  #acquaMed .wrap-box2 .icon-box2 span i::before {
+    color: rgba(13, 192, 192, 0.17);
+    font-size: 60px;
+    margin: 0px;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: -4px;
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    width: 100%; }
+  @media (min-width: 768px) {
+    #acquaMed .tab-animation > .tab-content {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 1em;
+      min-height: 200px;
+      font-weight: 300;
+      font-size: 1.25em;
+      background: #fff;
+      box-shadow: none;
+      margin-top: -1px; }
+      #acquaMed .tab-animation > .tab-content .tab-pane {
+        -webkit-transition: all linear 0.6s;
+        -moz-transition: all linear 0.6s;
+        -ms-transition: all linear 0.6s;
+        -o-transition: all linear 0.6s;
+        transition: all linear 0.6s; }
+        #acquaMed .tab-animation > .tab-content .tab-pane.active-remove {
+          position: absolute;
+          width: 100%;
+          display: block;
+          -webkit-transform: translateX(0);
+          -moz-transform: translateX(0);
+          transform: translateX(0); }
+        #acquaMed .tab-animation > .tab-content .tab-pane.active-remove-active {
+          -webkit-transform: translateX(100%);
+          -moz-transform: translateX(100%);
+          transform: translateX(100%);
+          opacity: 0; }
+        #acquaMed .tab-animation > .tab-content .tab-pane.active-add {
+          -webkit-transform: translateX(-100%);
+          -moz-transform: translateX(-100%);
+          transform: translateX(-100%);
+          opacity: 0; } }
+  #acquaMed .box-med-title {
+    background: #fff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #acquaMed .box-med-title h2 {
+      position: relative;
+      display: table;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 2.2em;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      #acquaMed .box-med-title h2 span {
+        color: #1E8BC3; }
+  #acquaMed #servicos {
+    background: #E7ECEA; }
+  #acquaMed #equipe {
+    padding-top: 0px;
+    padding-bottom: 60px;
+    float: left;
+    width: 100%;
+    /*Tabs*/
+    /* Box Team*/
+    /* Carousel */ }
+    #acquaMed #equipe .sp-title {
+      background: #efefef;
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 90px; }
+      #acquaMed #equipe .sp-title h2.sp-h2:after {
+        background: #efefef; }
+    #acquaMed #equipe h2.sp-h2 {
+      position: relative;
+      display: table;
+      border-bottom: 1px dashed #c1c1c1;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 2.2em;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      #acquaMed #equipe h2.sp-h2 span {
+        color: #1E8BC3; }
+      #acquaMed #equipe h2.sp-h2:after :after {
+        content: "\f067";
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        font-size: 16px;
+        bottom: -10px;
+        color: #d1d1d1;
+        left: 50%;
+        margin-left: -16px;
+        background: #fff;
+        padding: 0 10px; }
+    #acquaMed #equipe .line-tab {
+      margin-top: -2px;
+      height: 2px;
+      position: relative;
+      display: block;
+      width: 100%;
+      background: #fff; }
+    #acquaMed #equipe .clinic-tabs {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin-bottom: 0px; }
+      #acquaMed #equipe .clinic-tabs ul.nav-tabs {
+        display: table;
+        margin: -50px auto 0 auto;
+        border-bottom: none; }
+        #acquaMed #equipe .clinic-tabs ul.nav-tabs li {
+          border-radius: 6px 6px 0 0 !important;
+          margin-left: 23px; }
+          #acquaMed #equipe .clinic-tabs ul.nav-tabs li a {
+            background: #1E8BC3;
+            border-radius: 6px 6px 0 0 !important;
+            outline: none; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:hover, #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:focus {
+              background: #1C79A8;
+              border: none;
+              color: #fff;
+              transition: .5s;
+              outline: none; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:active {
+              background: #1C79A8;
+              color: #fff; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:hover i {
+              color: #fff;
+              transition: .5s; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:after {
+              width: 0;
+              height: 0;
+              border-bottom: 46px solid #1E8BC3;
+              border-right: 25px solid transparent;
+              position: absolute;
+              content: '';
+              top: 4px;
+              right: -25px;
+              transition: .5s; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li a:hover:after {
+              width: 0;
+              height: 0;
+              border-right: 25px solid transparent;
+              border-bottom: 46px solid #1C79A8;
+              position: absolute;
+              content: '';
+              top: 4px;
+              right: -25px;
+              transition: .5s; }
+          #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a,
+          #acquaMed #equipe .clinic-tabs ul.nav-tabs li a {
+            color: #fff;
+            font-size: 17px;
+            padding: 13px 23px 13px 40px;
+            border: none;
+            transition: .5s; }
+          #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active {
+            background: #fff; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a {
+              color: #1E8BC3 !important;
+              border-radius: 6px 6px 0 0 !important;
+              background: #fff !important; }
+              #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a, #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a:hover, #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a:focus {
+                border: none; }
+              #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a:after {
+                width: 0;
+                height: 0;
+                border-bottom: 48px solid #fff;
+                border-right: 25px solid transparent;
+                position: absolute;
+                content: '';
+                top: 2px;
+                right: -25px; }
+              #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active a:hover {
+                background: #fff;
+                color: #1E8BC3; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active i.tab-icon, #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active i.tab-icon:focus {
+              color: #1E8BC3;
+              transition: .5s; }
+            #acquaMed #equipe .clinic-tabs ul.nav-tabs li.active i.tab-icon:active {
+              color: #fff; }
+          #acquaMed #equipe .clinic-tabs ul.nav-tabs li i.tab-icon {
+            position: absolute;
+            left: 17px;
+            display: inline-block;
+            color: #fff;
+            font-size: 16px;
+            top: 17px;
+            width: inherit; }
+      #acquaMed #equipe .clinic-tabs .tab-content {
+        padding-top: 35px; }
+    #acquaMed #equipe .box-team {
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid #e0e0e0;
+      padding: 8px 8px 0px 8px;
+      position: relative;
+      display: block;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 3px;
+      background: #fff;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      #acquaMed #equipe .box-team:hover {
+        color: #1C79A8;
+        border: 1px solid #c1c1c1;
+        box-shadow: 1px 1px 2px #6d6d6d; }
+      #acquaMed #equipe .box-team img {
+        margin: 0 auto; }
+      #acquaMed #equipe .box-team h4 {
+        font-size: 16px;
+        padding-top: 12px;
+        position: relative;
+        margin-bottom: 20px; }
+        #acquaMed #equipe .box-team h4:after {
+          position: absolute;
+          bottom: -14px;
+          width: 50px;
+          height: 2px;
+          background: #1C79A8;
+          content: '';
+          left: 50%;
+          display: block;
+          margin-left: -25px; }
+      #acquaMed #equipe .box-team span.team-role {
+        color: #8b8d8f;
+        width: 100%;
+        padding: 4px 10px 19px 10px;
+        display: block; }
+      #acquaMed #equipe .box-team .img-wrap {
+        width: 100%;
+        height: 250px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 4px solid #1C79A8; }
+        #acquaMed #equipe .box-team .img-wrap:after {
+          content: '';
+          position: absolute;
+          opacity: 0;
+          -webkit-transition: opacity 0.5s, -webkit-transform 0.6s;
+          transition: opacity 0.5s, transform 0.6s;
+          background: rgba(0, 69, 156, 0.6);
+          width: 100%;
+          height: 100%;
+          left: 0px;
+          top: 0px;
+          z-index: 9;
+          border-radius: 6px 6px 0 0;
+          overflow: hidden; }
+        #acquaMed #equipe .box-team .img-wrap .team-info {
+          text-decoration: none;
+          opacity: 0;
+          position: absolute;
+          -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          text-align: center;
+          padding: 0 15px;
+          -webkit-transition: opacity 0.35s, -webkit-transform 0.5s;
+          transition: opacity 0.35s, transform 0.5s;
+          height: 100%;
+          height: 84.4%; }
+          #acquaMed #equipe .box-team .img-wrap .team-info span {
+            margin: 72% auto 0px auto;
+            color: #fff;
+            display: block;
+            opacity: 0;
+            text-transform: uppercase;
+            line-height: 2.2rem;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+            font-weight: 400;
+            z-index: 0;
+            -webkit-transition: all 0.35s ease-in-out;
+            -moz-transition: all 0.35s ease-in-out;
+            -ms-transition: all 0.35s ease-in-out;
+            -o-transition: all 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out; }
+          #acquaMed #equipe .box-team .img-wrap .team-info i {
+            margin: 10% auto 0px auto;
+            display: block;
+            opacity: 0;
+            z-index: 0;
+            color: #fff;
+            line-height: 1.6rem;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+            -webkit-transition: all 0.35s ease-in-out;
+            -moz-transition: all 0.35s ease-in-out;
+            -ms-transition: all 0.35s ease-in-out;
+            -o-transition: all 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+            -webkit-transform: translateY(-100%);
+            -moz-transform: translateY(-100%);
+            transform: translateY(-100%); }
+    #acquaMed #equipe .owl-theme .owl-dots {
+      margin-top: 35px !important; }
+    #acquaMed #equipe .owl-carousel .owl-nav {
+      visibility: hidden; }
+      #acquaMed #equipe .owl-carousel .owl-nav .owl-prev {
+        position: relative;
+        float: left;
+        margin-left: -20px;
+        opacity: 0;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear; }
+      #acquaMed #equipe .owl-carousel .owl-nav .owl-next {
+        position: relative;
+        margin-right: -20px;
+        float: right;
+        opacity: 0;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear; }
+    #acquaMed #equipe .owl-carousel:hover .owl-nav {
+      visibility: visible; }
+      #acquaMed #equipe .owl-carousel:hover .owl-nav .owl-prev {
+        position: relative;
+        float: left;
+        opacity: 1;
+        margin-left: 0px; }
+      #acquaMed #equipe .owl-carousel:hover .owl-nav .owl-next {
+        position: relative;
+        float: right;
+        opacity: 1;
+        margin-right: 0px; }
+  #acquaMed #especialidades {
+    background: #fff;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    float: left;
+    width: 100%; }
+    #acquaMed #especialidades .sp-title {
+      text-align: center;
+      padding-top: 0px;
+      padding-bottom: 90px; }
+      #acquaMed #especialidades .sp-title h2.sp-h2:after {
+        background: #efefef; }
+    #acquaMed #especialidades h2.sp-h2 {
+      position: relative;
+      display: table;
+      border-bottom: 1px dashed #c1c1c1;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 2.2em;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      #acquaMed #especialidades h2.sp-h2 span {
+        color: #1E8BC3; }
+      #acquaMed #especialidades h2.sp-h2:after :after {
+        content: "\f067";
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        font-size: 16px;
+        bottom: -10px;
+        color: #d1d1d1;
+        left: 50%;
+        margin-left: -16px;
+        background: #fff;
+        padding: 0 10px; }
+    #acquaMed #especialidades .box-med-title {
+      padding-bottom: 60px; }
+    #acquaMed #especialidades .box-title-espc {
+      position: relative;
+      margin: 0px 0 10px 0;
+      padding: 10px 0 20px 0;
+      border-bottom: 1px solid #1E8BC3;
+      border-radius: 0 0 0 15px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      color: #46494c; }
+      #acquaMed #especialidades .box-title-espc i {
+        height: 70px;
+        width: 70px;
+        background: #1E8BC3;
+        color: #FFFFFF;
+        font-size: 30px;
+        line-height: 70px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        border-radius: 15px 15px 0 15px; }
+    #acquaMed #especialidades .box-desc-espc {
+      margin-left: 10px;
+      margin-bottom: 60px; }
+      #acquaMed #especialidades .box-desc-espc h4 {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        color: #46494c; }
+        #acquaMed #especialidades .box-desc-espc h4.border-title {
+          line-height: 1.3em;
+          border-bottom: 1px solid #dedede;
+          position: relative;
+          margin-bottom: 40px;
+          width: 60%; }
+          #acquaMed #especialidades .box-desc-espc h4.border-title::after {
+            width: 100px;
+            height: 3px;
+            background: #1E8BC3;
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0px; }
+        #acquaMed #especialidades .box-desc-espc h4 span {
+          color: #1E8BC3; }
+      #acquaMed #especialidades .box-desc-espc p {
+        margin-bottom: 25px; }
+        #acquaMed #especialidades .box-desc-espc p.block-two {
+          padding-left: 25px;
+          border-left: 5px solid #E7ECEA;
+          margin-bottom: 0px;
+          padding-top: 5px;
+          padding-bottom: 5px; }
+        #acquaMed #especialidades .box-desc-espc p.text-content {
+          font-size: 15px;
+          color: #6d6d6d;
+          line-height: 1.6em; }
+      #acquaMed #especialidades .box-desc-espc .box-ccl {
+        display: block;
+        position: relative;
+        padding: 1.3rm;
+        margin-bottom: 1em;
+        border: 1px solid #E7ECEA;
+        background: #efefef;
+        cursor: pointer;
+        text-decoration: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        #acquaMed #especialidades .box-desc-espc .box-ccl h3, #acquaMed #especialidades .box-desc-espc .box-ccl h4 {
+          text-align: center;
+          color: #46494c;
+          font-weight: 400; }
+        #acquaMed #especialidades .box-desc-espc .box-ccl h3 {
+          line-height: 1.6rem;
+          font-size: 1.6rem;
+          margin-top: .8em; }
+        #acquaMed #especialidades .box-desc-espc .box-ccl h4 {
+          line-height: 1.6rem;
+          font-size: 1.4rem; }
+        #acquaMed #especialidades .box-desc-espc .box-ccl:hover, #acquaMed #especialidades .box-desc-espc .box-ccl.active {
+          background: #fff;
+          border-color: #1E8BC3; }
+          #acquaMed #especialidades .box-desc-espc .box-ccl:hover h3, #acquaMed #especialidades .box-desc-espc .box-ccl:hover h4, #acquaMed #especialidades .box-desc-espc .box-ccl.active h3, #acquaMed #especialidades .box-desc-espc .box-ccl.active h4 {
+            color: #1E8BC3; }
+    #acquaMed #especialidades .box-desc-espc-empty {
+      margin-left: 10px;
+      margin-bottom: 60px; }
+      #acquaMed #especialidades .box-desc-espc-empty h4.title-empty {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-top: 20px;
+        color: #46494c; }
+      #acquaMed #especialidades .box-desc-espc-empty h4.border-title {
+        line-height: 2.8em;
+        border-bottom: 1px solid #dedede;
+        position: relative;
+        margin-bottom: 25px !important;
+        width: 60%;
+        text-align: center;
+        display: block;
+        margin: 0 auto; }
+        #acquaMed #especialidades .box-desc-espc-empty h4.border-title::after {
+          width: 100px;
+          height: 3px;
+          background: #1E8BC3;
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: calc(50% - 50px);
+          right: calc(50% - 50px); }
+      #acquaMed #especialidades .box-desc-espc-empty h4.content-empty {
+        display: block;
+        position: relative;
+        margin: 30px auto;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 400;
+        padding-top: 20px;
+        color: #46494c;
+        text-align: justify; }
+        #acquaMed #especialidades .box-desc-espc-empty h4.content-empty span {
+          display: block;
+          color: #FFFFFF;
+          font-size: 2.8rem;
+          text-align: center;
+          background-color: #1E8BC3;
+          float: left;
+          margin: -7px 15px 0 0;
+          padding: 18px 19px; }
+      #acquaMed #especialidades .box-desc-espc-empty h4 span {
+        color: #1E8BC3; }
+      #acquaMed #especialidades .box-desc-espc-empty .icon-empty {
+        font-size: 6em;
+        color: #ccc;
+        text-align: center;
+        position: relative;
+        display: block;
+        -webkit-animation: move-margin 2s infinite;
+        -moz-animation: move-margin 2s infinite;
+        -ms-animation: move-margin 2s infinite;
+        -o-animation: move-margin 2s infinite;
+        animation: move-margin 2s infinite; }
+    #acquaMed #especialidades .box-filter {
+      width: 100%;
+      min-height: 300px;
+      max-height: 100%;
+      box-shadow: 4px 4px 20px transparent; }
+      #acquaMed #especialidades .box-filter .header-filter .search-field {
+        position: relative; }
+        #acquaMed #especialidades .box-filter .header-filter .search-field i {
+          position: absolute;
+          padding: 7px 11px;
+          color: #d7d7d7;
+          font-size: 1.8rem;
+          right: 5px;
+          top: 3px; }
+        #acquaMed #especialidades .box-filter .header-filter .search-field input {
+          padding: 6px 40px 6px 12px;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+          box-shadow: none;
+          height: 38px;
+          line-height: 30px;
+          outline: none;
+          margin-bottom: 5px; }
+          #acquaMed #especialidades .box-filter .header-filter .search-field input, #acquaMed #especialidades .box-filter .header-filter .search-field input:focus, #acquaMed #especialidades .box-filter .header-filter .search-field input:active, #acquaMed #especialidades .box-filter .header-filter .search-field input:hover {
+            border: 1px solid #ccc;
+            outline: none;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      #acquaMed #especialidades .box-filter .nav-filter {
+        display: block;
+        position: relative; }
+        #acquaMed #especialidades .box-filter .nav-filter .btn-all-filter {
+          width: 15%;
+          float: left;
+          display: block;
+          position: relative;
+          text-align: center;
+          height: 34px; }
+          #acquaMed #especialidades .box-filter .nav-filter .btn-all-filter a {
+            padding: .45em .1em .45em .1em;
+            line-height: 14px;
+            font-size: 12px;
+            background: #efefef;
+            border: 1px solid #e0e0e0;
+            color: #404040;
+            margin-top: 3px;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: -1px;
+            width: 90%; }
+            #acquaMed #especialidades .box-filter .nav-filter .btn-all-filter a:hover {
+              background: #E7ECEA; }
+        #acquaMed #especialidades .box-filter .nav-filter .oc-filter {
+          width: 84.9%;
+          float: left;
+          display: block;
+          position: relative; }
+      #acquaMed #especialidades .box-filter .espc-filter {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px; }
+        #acquaMed #especialidades .box-filter .espc-filter ul {
+          display: block;
+          position: relative;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          width: 100%;
+          max-height: 350px; }
+          #acquaMed #especialidades .box-filter .espc-filter ul li {
+            list-style: none;
+            width: 100%; }
+            #acquaMed #especialidades .box-filter .espc-filter ul li a {
+              display: block;
+              position: relative;
+              color: #46494c;
+              width: 100%;
+              padding: .6em;
+              border-radius: 0;
+              background-color: #ffffff;
+              border: 2px solid #e6e6e6;
+              cursor: pointer;
+              font-size: 1.4rem;
+              text-decoration: none; }
+    #acquaMed #especialidades .owl-alp-nav {
+      width: 86%;
+      margin-left: 12%;
+      height: auto;
+      display: block;
+      position: relative;
+      margin: 0px auto; }
+      #acquaMed #especialidades .owl-alp-nav .owl-stage-outer {
+        width: 100%;
+        position: relative;
+        z-index: 10; }
+      #acquaMed #especialidades .owl-alp-nav .item {
+        background: #fff;
+        padding: 10px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #46494c;
+        float: left;
+        cursor: pointer; }
+        #acquaMed #especialidades .owl-alp-nav .item.active {
+          background: #c1c1c1; }
+      #acquaMed #especialidades .owl-alp-nav .owl-nav {
+        z-index: 2;
+        position: absolute;
+        display: block;
+        top: -10px;
+        left: -10%;
+        width: 120%; }
+      #acquaMed #especialidades .owl-alp-nav .owl-prev {
+        position: relative;
+        float: left; }
+      #acquaMed #especialidades .owl-alp-nav .owl-next {
+        position: relative;
+        float: right; }
+      #acquaMed #especialidades .owl-alp-nav .owl-nav [class*="owl-"] {
+        margin: 0px;
+        padding: 0px; }
+      #acquaMed #especialidades .owl-alp-nav .owl-prev,
+      #acquaMed #especialidades .owl-alp-nav .owl-next {
+        background: white !important;
+        color: #46494c !important;
+        border-radius: 0px !important; }
+        #acquaMed #especialidades .owl-alp-nav .owl-prev:hover,
+        #acquaMed #especialidades .owl-alp-nav .owl-next:hover {
+          opacity: .8; }
+        #acquaMed #especialidades .owl-alp-nav .owl-prev i,
+        #acquaMed #especialidades .owl-alp-nav .owl-next i {
+          font-size: 1.4rem;
+          padding: 10px; }
+        #acquaMed #especialidades .owl-alp-nav .owl-prev.disabled,
+        #acquaMed #especialidades .owl-alp-nav .owl-next.disabled {
+          visibility: visible; }
+      #acquaMed #especialidades .owl-alp-nav .owl-dots {
+        display: none;
+        opacity: .5; }
+    #acquaMed #especialidades .popover {
+      max-width: 92% !important;
+      width: 92% !important;
+      border-radius: 0px;
+      border-color: #1E8BC3;
+      background-color: #1E8BC3;
+      color: #fff; }
+      #acquaMed #especialidades .popover.top > .arrow::after {
+        color: rgba(30, 139, 195, 0.3);
+        border-top-color: #1E8BC3; }
+      #acquaMed #especialidades .popover .popover-close {
+        width: 30px;
+        display: block;
+        float: right;
+        text-align: right;
+        margin-right: 10px;
+        cursor: pointer; }
+        #acquaMed #especialidades .popover .popover-close, #acquaMed #especialidades .popover .popover-close i {
+          color: #fff; }
+      #acquaMed #especialidades .popover .content-popover .team-img,
+      #acquaMed #especialidades .popover .content-popover .team-content {
+        display: block;
+        position: relative;
+        float: left; }
+      #acquaMed #especialidades .popover .content-popover .team-img {
+        padding: 5px;
+        width: 40%;
+        height: auto; }
+      #acquaMed #especialidades .popover .content-popover .team-content {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 59.9%; }
+        #acquaMed #especialidades .popover .content-popover .team-content h2 {
+          font-size: 1.3rem;
+          font-weight: 700;
+          display: block; }
+        #acquaMed #especialidades .popover .content-popover .team-content p {
+          margin: 0px 0px 0px 0px !important; }
+          #acquaMed #especialidades .popover .content-popover .team-content p h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 5px; }
+          #acquaMed #especialidades .popover .content-popover .team-content p p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 10px; }
+  #acquaMed #blog {
+    background: #efefef;
+    padding-top: 0px;
+    padding-bottom: 45px;
+    float: left;
+    width: 100%; }
+    #acquaMed #blog .sp-title {
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 60px; }
+      #acquaMed #blog .sp-title h2.sp-h2:after {
+        background: #efefef; }
+    #acquaMed #blog h2.sp-h2 {
+      position: relative;
+      display: table;
+      border-bottom: 1px dashed #c1c1c1;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-transform: capitalize;
+      text-align: center;
+      line-height: 2.2em;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      #acquaMed #blog h2.sp-h2 span {
+        color: #1E8BC3; }
+      #acquaMed #blog h2.sp-h2:after :after {
+        content: "\f067";
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        font-size: 16px;
+        bottom: -10px;
+        color: #d1d1d1;
+        left: 50%;
+        margin-left: -16px;
+        background: #fff;
+        padding: 0 10px; }
+    #acquaMed #blog .owl-carousel .owl-video-wrapper,
+    #acquaMed #blog .owl-carousel .owl-video-frame {
+      height: 240px !important; }
+    #acquaMed #blog .box-news {
+      padding: .6em .6em 0 .6em;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: inset 0 1px 1px rgba(78, 78, 78, 0.095); }
+      #acquaMed #blog .box-news .news-img {
+        width: 100%;
+        height: 240px;
+        position: relative;
+        overflow: hidden; }
+        #acquaMed #blog .box-news .news-img a {
+          cursor: pointer !important;
+          text-decoration: none; }
+          #acquaMed #blog .box-news .news-img a img {
+            margin: 0 auto;
+            border-radius: 3px 3px 0 0; }
+          #acquaMed #blog .box-news .news-img a em {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: .5s; }
+            #acquaMed #blog .box-news .news-img a em::after {
+              position: absolute;
+              content: '\f0c1';
+              font: normal normal normal 14px/1 FontAwesome;
+              top: 30px;
+              font-size: 35px;
+              color: rgba(255, 255, 255, 0.8);
+              left: 50%;
+              margin-left: -20px;
+              transition: .5s;
+              opacity: 0; }
+            #acquaMed #blog .box-news .news-img a em::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+              background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+              background: rgba(13, 192, 192, 0.55);
+              content: '';
+              opacity: 0;
+              -webkit-transform: translate3d(0, 0%, 0);
+              transform: translate3d(0, 0%, 0);
+              transition: .5s; }
+        #acquaMed #blog .box-news .news-img .metadata {
+          position: absolute;
+          width: 50%;
+          bottom: 32px; }
+          #acquaMed #blog .box-news .news-img .metadata.news-day span, #acquaMed #blog .box-news .news-img .metadata.news-year span {
+            padding: 5px 13px;
+            position: absolute;
+            color: #fff;
+            font-size: 16px;
+            bottom: 0px; }
+          #acquaMed #blog .box-news .news-img .metadata.news-day {
+            left: 0px;
+            display: inline-block;
+            border-bottom: 3px solid #1E8BC3;
+            min-height: 32px;
+            bottom: 0px; }
+            #acquaMed #blog .box-news .news-img .metadata.news-day span {
+              background: #1E8BC3;
+              right: 0px;
+              border-radius: 3px 0 0 0; }
+          #acquaMed #blog .box-news .news-img .metadata.news-year {
+            right: 0px;
+            display: inline-block;
+            border-bottom: 3px solid #414141;
+            min-height: 32px;
+            bottom: 0px; }
+            #acquaMed #blog .box-news .news-img .metadata.news-year span {
+              background: #414141;
+              left: 0px;
+              border-radius: 0 3px 0 0; }
+      #acquaMed #blog .box-news h4 {
+        font-size: 18px;
+        padding: 0 .6em;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        color: #46494c; }
+      #acquaMed #blog .box-news p {
+        margin: 0 0 10px;
+        padding: .0em .6em .0em .6em;
+        padding-bottom: 15px;
+        line-height: 1.4em;
+        font-size: 15px;
+        color: #6d6d6d;
+        text-overflow: ellipsis;
+        max-height: 65px;
+        height: 2.8em;
+        /* exactly three lines */
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #acquaMed #blog .box-news .footer-news {
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        display: block;
+        position: relative;
+        width: 106%;
+        margin-left: -3%;
+        text-align: center; }
+        #acquaMed #blog .box-news .footer-news span {
+          display: inline-block;
+          position: relative;
+          padding: 8px 13px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #757575; }
+          #acquaMed #blog .box-news .footer-news span::after {
+            content: '';
+            height: 20px;
+            width: 1px;
+            background: #c5c5c5;
+            right: -3px;
+            position: absolute; }
+          #acquaMed #blog .box-news .footer-news span:last-of-type::after {
+            background: none; }
+          #acquaMed #blog .box-news .footer-news span a {
+            cursor: pointer;
+            color: #1E8BC3;
+            transition: .5s;
+            position: relative;
+            text-decoration: none; }
+            #acquaMed #blog .box-news .footer-news span a::after {
+              content: "\f105";
+              font: normal normal normal 14px/1 FontAwesome;
+              position: absolute;
+              right: -5px;
+              top: -2px;
+              font-size: 18px;
+              transition: .5s;
+              opacity: 0;
+              color: #1E8BC3; }
+          #acquaMed #blog .box-news .footer-news span:hover {
+            transition: .5s;
+            color: #1E8BC3; }
+            #acquaMed #blog .box-news .footer-news span:hover a::after {
+              right: -16px;
+              opacity: 1;
+              transition: .5s;
+              color: #1E8BC3; }
+          #acquaMed #blog .box-news .footer-news span i {
+            color: #1E8BC3;
+            margin-right: 10px; }
+    #acquaMed #blog .owl-carousel .owl-nav {
+      visibility: hidden; }
+      #acquaMed #blog .owl-carousel .owl-nav .owl-prev {
+        position: relative;
+        float: left;
+        margin-left: -20px;
+        opacity: 0;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear; }
+      #acquaMed #blog .owl-carousel .owl-nav .owl-next {
+        position: relative;
+        margin-right: -20px;
+        float: right;
+        opacity: 0;
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear; }
+    #acquaMed #blog .owl-carousel .owl-dot {
+      display: none; }
+    #acquaMed #blog .owl-carousel:hover .owl-nav {
+      visibility: visible; }
+      #acquaMed #blog .owl-carousel:hover .owl-nav .owl-prev {
+        position: relative;
+        float: left;
+        opacity: 1;
+        margin-left: 0px; }
+      #acquaMed #blog .owl-carousel:hover .owl-nav .owl-next {
+        position: relative;
+        float: right;
+        opacity: 1;
+        margin-right: 0px; }
+  #acquaMed #contato {
+    background: #fff;
+    padding-top: 0px;
+    padding-bottom: 45px;
+    float: left;
+    width: 100%; }
+    #acquaMed #contato .sp-title {
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 0px; }
+      #acquaMed #contato .sp-title h2.sp-h2:after {
+        background: #efefef; }
+    #acquaMed #contato h2.sp-h2 {
+      position: relative;
+      display: table;
+      border-bottom: 1px dashed #c1c1c1;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-transform: inherit;
+      text-align: center;
+      line-height: 2.2em;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px; }
+      #acquaMed #contato h2.sp-h2 span {
+        color: #1E8BC3; }
+      #acquaMed #contato h2.sp-h2:after :after {
+        content: "\f067";
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        font-size: 16px;
+        bottom: -10px;
+        color: #d1d1d1;
+        left: 50%;
+        margin-left: -16px;
+        background: #fff;
+        padding: 0 10px; }
+    #acquaMed #contato .text-content {
+      margin-bottom: 30px;
+      font-size: 15px;
+      color: #6d6d6d;
+      line-height: 1.6em; }
+    #acquaMed #contato .block-two {
+      padding-left: 25px;
+      border-left: 5px solid #E8E8E8;
+      margin-bottom: 0px;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+    #acquaMed #contato .border-title {
+      font-size: 22px;
+      line-height: 1.3em;
+      border-bottom: 1px solid #dedede;
+      position: relative;
+      padding-bottom: 15px; }
+      #acquaMed #contato .border-title:after {
+        width: 90px;
+        height: 3px;
+        background: #1E8BC3;
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0px; }
+      #acquaMed #contato .border-title span {
+        color: #1E8BC3; }
+    #acquaMed #contato form {
+      margin-top: 25px;
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto;
+      padding-bottom: 60px; }
+      #acquaMed #contato form .contato-field {
+        position: relative; }
+        #acquaMed #contato form .contato-field i {
+          position: absolute;
+          padding: 7px 11px;
+          color: #d7d7d7;
+          font-size: 21px; }
+        #acquaMed #contato form .contato-field input {
+          padding: 6px 12px 6px 36px;
+          border-radius: 6px;
+          border: 1px solid #d3d3d3;
+          box-shadow: none;
+          height: 38px;
+          line-height: 30px;
+          outline: none;
+          margin-bottom: 20px; }
+        #acquaMed #contato form .contato-field textarea {
+          min-height: 200px; }
+      #acquaMed #contato form .button-dark {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 20px;
+        color: #ffffff;
+        background: #1E8BC3;
+        border-radius: 4px;
+        border: 1px solid #eaeaea;
+        padding: 8px 12px 8px 12px;
+        text-transform: uppercase;
+        text-align: center; }
+    #acquaMed #contato .panel-contact .panel,
+    #acquaMed #contato .panel-contact .panel-default {
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 0;
+      box-shadow: none; }
+      #acquaMed #contato .panel-contact .panel .panel-heading,
+      #acquaMed #contato .panel-contact .panel-default .panel-heading {
+        color: #6d6d6d;
+        background-color: transparent;
+        border-radius: 0px;
+        border-color: #f5f5f5;
+        padding: 0px 0px; }
+        #acquaMed #contato .panel-contact .panel .panel-heading h4.panel-title,
+        #acquaMed #contato .panel-contact .panel-default .panel-heading h4.panel-title {
+          padding: 10px 15px;
+          text-align: left;
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #4d4d4d;
+          text-transform: uppercase;
+          cursor: pointer; }
+          #acquaMed #contato .panel-contact .panel .panel-heading h4.panel-title i:not(.pull-right):not(.fa-angle-right), #acquaMed #contato .panel-contact .panel .panel-heading h4.panel-title i:not(.pull-right):not(.fa-angle-down),
+          #acquaMed #contato .panel-contact .panel-default .panel-heading h4.panel-title i:not(.pull-right):not(.fa-angle-right),
+          #acquaMed #contato .panel-contact .panel-default .panel-heading h4.panel-title i:not(.pull-right):not(.fa-angle-down) {
+            font-size: 1.8rem;
+            margin-right: .8em;
+            color: #1E8BC3; }
+          #acquaMed #contato .panel-contact .panel .panel-heading h4.panel-title i.pull-right.fa-angle-right, #acquaMed #contato .panel-contact .panel .panel-heading h4.panel-title i.pull-right.fa-angle-down,
+          #acquaMed #contato .panel-contact .panel-default .panel-heading h4.panel-title i.pull-right.fa-angle-right,
+          #acquaMed #contato .panel-contact .panel-default .panel-heading h4.panel-title i.pull-right.fa-angle-down {
+            font-size: 1.6rem;
+            text-align: center;
+            color: #6d6d6d; }
+      #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body,
+      #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body {
+        background: #F4FBFF;
+        padding: 20px; }
+        #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul,
+        #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul {
+          display: block;
+          list-style: none; }
+          #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li,
+          #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li {
+            position: relative;
+            display: block;
+            width: 100%;
+            list-style: none;
+            padding: .3em; }
+            #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc,
+            #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc {
+              padding-right: .8em;
+              font-size: 2rem; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-whatsapp,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-whatsapp {
+                color: #33B679; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-facebook-official, #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-facebook,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-facebook-official,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-facebook {
+                color: #27599A; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-youtube, #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-youtube-play, #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-youtube-square,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-youtube,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-youtube-play,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-youtube-square {
+                color: #EF3E37; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-skype,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-skype {
+                color: #00AFE1; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-twitter, #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-twitter-square,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-twitter,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-twitter-square {
+                color: #00AEEC; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li .icon-desc.fa-instagram,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li .icon-desc.fa-instagram {
+                color: #F76B38; }
+            #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li a,
+            #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li a {
+              color: inherit;
+              text-decoration: none; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li a:hover,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li a:hover {
+                color: inherit;
+                opacity: .9; }
+            #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li p,
+            #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li p {
+              margin-left: 30px;
+              margin-top: .3em; }
+              #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li p strong,
+              #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li p strong {
+                font-weight: 700; }
+            #acquaMed #contato .panel-contact .panel .panel-collapse .panel-body ul li span,
+            #acquaMed #contato .panel-contact .panel-default .panel-collapse .panel-body ul li span {
+              text-transform: inherit;
+              font-size: 1.4rem;
+              font-weight: 400;
+              color: #3F3F3F;
+              margin-left: 5px;
+              margin-right: 5px; }
+  #acquaMed #mapsMed {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto; }
+
+footer#footer-acquamed {
+  width: 100%;
+  display: block;
+  float: left; }
+  footer#footer-acquamed .main-footer {
+    background: #1e2127;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: block;
+    float: left;
+    border-bottom: 1px solid #181a1f; }
+  footer#footer-acquamed .sub-footer {
+    background: #181a1f;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    float: left;
+    border-top: 1px solid #272b32; }
+    footer#footer-acquamed .sub-footer p {
+      font-size: 12px;
+      margin-bottom: 0px;
+      padding: 5px 0; }
+      footer#footer-acquamed .sub-footer p.copy-content a {
+        color: #E56310;
+        font-size: 1.2rem;
+        padding: 0 2px;
+        transition: .3s;
+        text-decoration: none; }
+        footer#footer-acquamed .sub-footer p.copy-content a:hover {
+          color: #ffc400;
+          opacity: .7; }
+
+/*# sourceMappingURL=acquamed.css.map */

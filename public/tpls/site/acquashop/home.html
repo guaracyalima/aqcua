@@ -1,0 +1,379 @@
+<div id="acquaShop">
+    <section id="home" class="content-carousel">
+        <div uib-carousel active="slides.active" interval="slides.interval" no-wrap="slides.noWrapSlides">
+            <div uib-slide ng-repeat="slide in pages.slider" index="$index">
+                <img ng-src="{{slide.img}}" class="img-responsive" style="margin:auto;">
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre" style="padding-bottom: 0px;">
+        <div class="container-fluid pl-0 pr-0 n-overflow">
+            <div class="box-img-left">
+                <a>
+                    <img ng-src="{{pages.sobre.content[0].img}}" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="box-content-right">
+                <h3>{{pages.sobre.title}}</h3>
+                <p ng-bind-html="pages.sobre.content[0].content"></p>
+                <a dts-nav-scroll dt-href="'#produto'" class="btn btn-sh">Escolha sua roupa</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2">Notícias <span>&amp;</span> Novidades</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div   
+                    dts-owlcarousel="" 
+                    oc-options="blogOption" 
+                    oc-data="pages.blog"
+                    template="acquashop-blog"
+                ></div> 
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <!-- TITLE -->
+            <div class="row"></div>
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"
+                        ng-repeat="box in pages.servicos.content[0].box track by box.seq">
+                    <div class="icon-animation">
+                        <div class="wrap-box2 espec-effect">
+                            <div>
+                                <div class="icon-box2">
+                                    <i ng-class="box.icon" ></i>
+                                </div>
+                                <h4>{{box.title}}</h4>
+                                <p ng-bind-html="box.content"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promocoes">
+        <div class="container-fluid pl-0 pr-0">
+             <div id="parallax-img" 
+                  dts-parallax-img="" 
+                  dt-src="pages.publicicdade.content.img" 
+                  dt-speed="10"
+                  dt-height="60"
+                  >
+                <div class="banner-sale">
+                    <div class="container">
+                        <h3 class="subtitle" ng-bind-html="pages.publicicdade.content.subtitle"></h3>
+                        <h2 class="title" ng-bind-html="pages.publicicdade.content.title"></h2>
+                        <p class="txt" ng-bind-html="pages.publicicdade.content.content"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produto">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2">Produtos</h2>
+            </div>
+        </div>
+        <div class="container mg-tab">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <uib-tabset class="tab-animation" active="active">
+                        <uib-tab index="$index" ng-repeat="tab in pages.produtos">
+                            <uib-tab-heading>
+                                {{tab.title}}
+                            </uib-tab-heading>
+                            <div class="content-products">
+                                <div class="col-sm-3 col-xs-12" data-ng-repeat="prod in tab.products">
+                                    <div class="box-products">
+                                        <div class="product-overlay-popover"
+                                            uib-popover-template="prod.template"
+                                            popover-placement="right-top"
+                                            popover-trigger="'focus'"
+                                            popover-is-open="prod.popover"
+                                            >
+                                        </div>
+                                        <div class="img-product clearfix">
+                                            <img data-ng-src="{{prod.img}}" alt="{{prod.title}}">
+                                            <a class="mask-product"
+                                                data-ng-class="{'active' : prod.popover}" 
+                                                data-ng-click="prod.popover = !prod.popover">
+                                                <span>Detalhes</span>
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                        <div class="caption-product clearfix">
+                                            <h5>{{prod.title}}</h5>
+                                            <h3>
+                                                <a data-ng-click="addCart($event, prod)" class="text-center"><i class="fa fa-shopping-basket"></i> Adicionar</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2">Galeria</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div   
+                dts-owlcarousel="" 
+                oc-options="blogOption" 
+                oc-data="pages.galerias"
+                template="acqua-galeria"
+                ></div> 
+            </div>
+        </div> 
+    </section>
+
+
+    
+
+
+    <section id="contato">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2" ng-bind-html="pages.contato.title"></h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-60">
+            
+                <div class="col-lg-12 col-md-12 col-lg-12 col-sm-12 col-xs-12 mb-30">
+                    <p class="text-content block-two">
+                        Se você deseja entrar em contato com o AcquaShop para enviar sugestões ou obter alguma informação, utilize o formulário de contato abaixo
+Os itens marcados com "*" são obrigatórios.
+                    </p>
+                </div>
+
+                <div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 pr-45">
+
+                    <h4 class="border-title ng-binding">
+                        Formulario de <span>Contato<span id="transmark" style="display: none; width: 0px; height: 0px;"></span></span>
+                    </h4>
+
+                    <!--Form Start-->
+                    <form id="contactForm" novalidate="novalidate">
+                        <!-- Name Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group control-odd">
+                                <i class="fa fa-user"></i>
+                                <input class="form-control" placeholder="Nome *" name="name" id="name" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Email Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-envelope-o"></i>
+                                <input class="form-control" placeholder="E-mail *" name="email" id="email" type="email">
+                            </div>
+                        </div>
+                        
+                        <!-- Whatsapp Text Box -->
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-whatsapp"></i>
+                                <input class="form-control" placeholder="Whatsapp" name="whatsapp" id="whatsapp" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Telefone Text Box-->
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 not-pad">
+                            <div class="contato-field control-group pl-15">
+                                <i class="fa fa-mobile"></i>
+                                <input class="form-control" placeholder="Telefone ou Celular *" name="phone" id="phone" type="text">
+                            </div>
+                        </div>
+                        
+                        <!-- Subject Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-pencil-square-o"></i>
+                                <input class="form-control" placeholder="Assunto *" name="subject" id="subject" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Message Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <textarea class="form-control tarea" placeholder="Mensagem *" name="message" id="message"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field main-but">
+                                <div class="inner-out-button">
+                                    <button class="button-dark button2 pull-right" data-loading-text="Enviando..." type="submit">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </form><!-- Form End -->
+                </div>
+
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 pr-45">
+
+                    <h4 class="border-title ng-binding">
+                        Mais <span>informações<span id="transmark" style="display: none; width: 0px; height: 0px;"></span></span>
+                    </h4>
+                    
+                    <div class="panel-group mt-25 panel-contact" id="accordion">
+
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.contacts">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c1 = !c1">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-phone"></i> Telefones
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': c1, 'fa-angle-down ': !c1 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="c1" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="co in pages.contato.info.contacts track by co.seq">
+                                            <i class="icon-desc" ng-if="co.type.icon" ng-class="co.type.icon"></i>
+                                            <span ng-if="co.code">{{co.code}}</span>
+                                            <span>{{co.number_id}}</span>
+                                            <span ng-if="co.type.operators">( {{co.type.operators}} )</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.emails">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c2 = !c2">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-envelope-o"></i> E-mails
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c2, 'fa-angle-down ': c2 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c2" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="em in pages.contato.info.emails track by em.seq">
+                                            <span ng-if="em.desc">( {{em.desc}} )</span>
+                                            <span>{{em.email}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default" ng-if="pages.contato.info.business_hours">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c3 = !c3">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-clock-o"></i> Horários
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c3, 'fa-angle-down ': c3 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c3" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="bh in pages.contato.info.business_hours track by bh.seq">
+                                            <i class="icon-desc" ng-if="bh.icon" ng-class="bh.icon"></i>
+                                            <span ng-bind-html="bh.desc"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default" ng-if="pages.contato.info.address">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c4 = !c4">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-map-o"></i> Endereço
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c4, 'fa-angle-down ': c4 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c4" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="ad in pages.contato.info.address track by ad.seq">
+                                            <i class="icon-desc" ng-if="ad.icon" ng-class="ad.icon"></i>
+                                            <span ng-if="ad.country" ng-bind-html="ad.country"></span> -
+                                            <span ng-if="ad.state" ng-bind-html="ad.state"></span> / 
+                                            <span ng-if="ad.neighborhood" ng-bind-html="ad.neighborhood"></span>
+                                            <p>
+                                                <span ng-if="ad.street"><strong>Rua:</strong> {{ad.street}}</span> 
+                                            </p>
+                                            <p>
+                                                <span ng-if="ad.number"><strong>Nº:</strong> {{ad.number}}</span> 
+                                            </p>
+                                            <p>
+                                                <span ng-if="ad.zip_code"><strong>Cep:</strong> {{ad.zip_code}}</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.social">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c5 = !c5">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-share-square-o"></i> Redes Sociais
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c5, 'fa-angle-down ': c5 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c5" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="so in pages.contato.info.social track by so.seq">
+                                            <a ng-href="{{so.link}}" target="_blank">
+                                                <i class="icon-desc" ng-if="so.icon" ng-class="so.icon"></i>
+                                                <span ng-if="so.name">({{so.name}})</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+        ==========================================================
+        MAPS
+        ==========================================================
+    -->
+    <section id="mapsShop" class="container-fluid pl-0 pr-0">
+        <div class="row-fluid">
+            <div dts-maps="" data-options="confMaps"></div>
+        </div>
+    </section>
+
+
+</div>

@@ -1,0 +1,321 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="#" class="simple-text">
+            Mangue
+        </a>
+    </div>
+
+    <ul class="nav">
+        <li ui-sref-active="active">
+            <a ui-sref="main.dash">
+                <i class="pe-7s-graph"></i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="GrupoCollapsed = !GrupoCollapsed">
+                <i class="pe-7s-albums"></i>
+                <p>Grupo Acqua</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !GrupoCollapsed, 'fa-angle-down': GrupoCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!GrupoCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.grupo.segmentos">
+                            Imagem Segmentos
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.grupo.sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.grupo.publicidade">
+                            Publicidade
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.grupo.servicos">
+                            Servicos
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.grupo.contato">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>    
+        </li>
+
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="MedCollapsed = !MedCollapsed">
+                <i class="pe-7s-like"></i>
+                <p>AcquaMed</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !MedCollapsed, 'fa-angle-down': MedCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!MedCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquamed.slider">
+                            Slider Imagem
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquamed.sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquamed.noticias">
+                            Noticias
+                        </a>
+                    </li>
+                    <li class="dropdown" ui-sref-active="active">
+                        <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="modulosServicoCollapsed = !modulosServicoCollapsed">
+                            Serviços
+                            <i class="fa ic-small" ng-class="{'fa-angle-right': !modulosServicoCollapsed, 'fa-angle-down': modulosServicoCollapsed}" style="top:5px!important;"></i></a>
+                        </a>
+                        <div class="collapse" uib-collapse="!modulosServicoCollapsed">
+                            <ul class="nav mt-0 pt-0">
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquamed.servicos" class="pl-40">
+                                        Titulo Serviço
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquamed.especialidades" class="pl-40">
+                                        Especialidades
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquamed.servico" class="pl-40">
+                                        Serviços
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown" ui-sref-active="active">
+                        <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="modulosEquipeCollapsed = !modulosEquipeCollapsed">
+                            Equipe
+                            <i class="fa ic-small" ng-class="{'fa-angle-right': !modulosEquipeCollapsed, 'fa-angle-down': modulosEquipeCollapsed}" style="top:5px!important;"></i></a>
+                        </a>
+                        <div class="collapse" uib-collapse="!modulosEquipeCollapsed">
+                            <ul class="nav mt-0 pt-0">
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquamed.categorias" class="pl-40">
+                                        Categorias
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquamed.profissionais" class="pl-40">
+                                        Profissionais
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquamed.galerias">
+                            Galeria de Foto
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquamed.contato">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>    
+        </li>
+
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="ShopCollapsed = !ShopCollapsed">
+                <i class="pe-7s-shopbag"></i>
+                <p>AcquaShop</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !ShopCollapsed, 'fa-angle-down': ShopCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!ShopCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.slider">
+                            Slider Imagem
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.servicos">
+                            Serviços
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.publicidade">
+                            Publicidade
+                        </a>
+                    </li>
+                    <li class="dropdown" ui-sref-active="active">
+                        <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="modulosProdutosCollapsed = !modulosProdutosCollapsed">
+                            Produtos
+                            <i class="fa ic-small" ng-class="{'fa-angle-right': !modulosProdutosCollapsed, 'fa-angle-down': modulosProdutosCollapsed}" style="top:5px!important;"></i></a>
+                        </a>
+                        <div class="collapse" uib-collapse="!modulosProdutosCollapsed">
+                            <ul class="nav mt-0 pt-0">
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquashop.categorias" class="pl-40">
+                                        Categorias
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="main.modules.acquashop.produtos" class="pl-40">
+                                        Produtos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.noticias">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.galerias">
+                            Galeria de Foto
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquashop.contato">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>    
+        </li>
+
+
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="FitCollapsed = !FitCollapsed">
+                <i class="pe-7s-gym"></i>
+                <p>AcquaFitness</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !FitCollapsed, 'fa-angle-down': FitCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!FitCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.slider">
+                            Slider Imagem
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.servicos">
+                            Serviços
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.publicidade">
+                            Publicidade
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.noticias">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.galerias">
+                            Galeria de Foto
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquafitness.contato">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="AcqCollapsed = !AcqCollapsed">
+                <i class="pe-7s-culture"></i>
+                <p>Acquarius</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !AcqCollapsed, 'fa-angle-down': AcqCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!AcqCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.slider">
+                            Slider Imagem
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.servicos">
+                            Serviços
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.publicidade">
+                            Publicidade
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.noticias">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.galerias">
+                            Galeria de Foto
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.modules.acquarius.contato">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="collapse" class="collapsed" ng-click="ConfCollapsed = !ConfCollapsed">
+                <i class="pe-7s-config"></i>
+                <p>Configurações</p> 
+                <i class="fa ic-small" ng-class="{'fa-angle-right': !ConfCollapsed, 'fa-angle-down': ConfCollapsed}"></i></a>
+            <div class="collapse" uib-collapse="!ConfCollapsed">
+                <ul class="nav mt-0">
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.conf.mail">
+                            <i class="pe-7s-mail" style="margin-top: -5px;"></i>
+                            E-mails
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="main.conf.maps">
+                            <i class="pe-7s-map-marker" style="margin-top: -5px;"></i>
+                            Geolocalização
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="sidebar-background" style="background-image: url(img/sidebar-5.jpg) "></div>

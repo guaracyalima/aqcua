@@ -1,0 +1,413 @@
+@font-face {
+  font-family: 'gigants-building';
+  src:  url('../../fonts/gigants/building/gigants-building.eot?392b52');
+  src:  url('../../fonts/gigants/building/gigants-building.eot?392b52#iefix') format('embedded-opentype'),
+    url('../../fonts/gigants/building/gigants-building.ttf?392b52') format('truetype'),
+    url('../../fonts/gigants/building/gigants-building.woff?392b52') format('woff'),
+    url('../../fonts/gigants/building/gigants-building.svg?392b52#gigants-building') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="gi-buil-"], [class*=" gi-buil-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gigants-building' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gi-buil {
+	display: inline-block;
+	font: normal normal normal 14px/1 gigants;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.gi-buil-badge:before {
+  content: "\e900";
+}
+.gi-buil-blueprint:before {
+  content: "\e901";
+}
+.gi-buil-blueprint-1:before {
+  content: "\e902";
+}
+.gi-buil-blueprint-2:before {
+  content: "\e903";
+}
+.gi-buil-browser:before {
+  content: "\e904";
+}
+.gi-buil-building:before {
+  content: "\e905";
+}
+.gi-buil-building-1:before {
+  content: "\e906";
+}
+.gi-buil-building-2:before {
+  content: "\e907";
+}
+.gi-buil-building-3:before {
+  content: "\e908";
+}
+.gi-buil-building-4:before {
+  content: "\e909";
+}
+.gi-buil-catalogue:before {
+  content: "\e90a";
+}
+.gi-buil-chat:before {
+  content: "\e90b";
+}
+.gi-buil-chat-1:before {
+  content: "\e90c";
+}
+.gi-buil-chat-2:before {
+  content: "\e90d";
+}
+.gi-buil-construction:before {
+  content: "\e90e";
+}
+.gi-buil-contract:before {
+  content: "\e90f";
+}
+.gi-buil-duplex:before {
+  content: "\e910";
+}
+.gi-buil-house:before {
+  content: "\e911";
+}
+.gi-buil-house-1:before {
+  content: "\e912";
+}
+.gi-buil-house-2:before {
+  content: "\e913";
+}
+.gi-buil-house-3:before {
+  content: "\e914";
+}
+.gi-buil-house-4:before {
+  content: "\e915";
+}
+.gi-buil-house-5:before {
+  content: "\e916";
+}
+.gi-buil-house-6:before {
+  content: "\e917";
+}
+.gi-buil-house-7:before {
+  content: "\e918";
+}
+.gi-buil-house-8:before {
+  content: "\e919";
+}
+.gi-buil-house-9:before {
+  content: "\e91a";
+}
+.gi-buil-house-10:before {
+  content: "\e91b";
+}
+.gi-buil-house-11:before {
+  content: "\e91c";
+}
+.gi-buil-house-12:before {
+  content: "\e91d";
+}
+.gi-buil-house-13:before {
+  content: "\e91e";
+}
+.gi-buil-house-14:before {
+  content: "\e91f";
+}
+.gi-buil-house-15:before {
+  content: "\e920";
+}
+.gi-buil-house-16:before {
+  content: "\e921";
+}
+.gi-buil-house-key:before {
+  content: "\e922";
+}
+.gi-buil-mansion:before {
+  content: "\e923";
+}
+.gi-buil-mansion-1:before {
+  content: "\e924";
+}
+.gi-buil-money-flow:before {
+  content: "\e925";
+}
+.gi-buil-mortgage:before {
+  content: "\e926";
+}
+.gi-buil-newspaper:before {
+  content: "\e927";
+}
+.gi-buil-newspaper-1:before {
+  content: "\e928";
+}
+.gi-buil-newspaper-2:before {
+  content: "\e929";
+}
+.gi-buil-panel:before {
+  content: "\e92a";
+}
+.gi-buil-phone-call:before {
+  content: "\e92b";
+}
+.gi-buil-presentation:before {
+  content: "\e92c";
+}
+.gi-buil-presentation-1:before {
+  content: "\e92d";
+}
+.gi-buil-real-estate:before {
+  content: "\e92e";
+}
+.gi-buil-real-estate-1:before {
+  content: "\e92f";
+}
+.gi-buil-real-estate-2:before {
+  content: "\e930";
+}
+.gi-buil-real-estate-3:before {
+  content: "\e931";
+}
+.gi-buil-seller:before {
+  content: "\e932";
+}
+.gi-buil-seller-1:before {
+  content: "\e933";
+}
+.gi-buil-seller-2:before {
+  content: "\e934";
+}
+.gi-buil-seller-3:before {
+  content: "\e935";
+}
+.gi-buil-seller-4:before {
+  content: "\e936";
+}
+.gi-buil-seller-5:before {
+  content: "\e937";
+}
+.gi-buil-shield:before {
+  content: "\e938";
+}
+.gi-buil-swimming-pool:before {
+  content: "\e939";
+}
+.gi-buil-unprotected:before {
+  content: "\e93a";
+}
+.gi-buil-web-page:before {
+  content: "\e93b";
+}
+.gi-buil-bench:before {
+  content: "\e93c";
+}
+.gi-buil-billboard:before {
+  content: "\e93d";
+}
+.gi-buil-bridge:before {
+  content: "\e93e";
+}
+.gi-buil-building2:before {
+  content: "\e93f";
+}
+.gi-buil-building-12:before {
+  content: "\e940";
+}
+.gi-buil-building-22:before {
+  content: "\e941";
+}
+.gi-buil-building-32:before {
+  content: "\e942";
+}
+.gi-buil-building-42:before {
+  content: "\e943";
+}
+.gi-buil-bus-stop:before {
+  content: "\e944";
+}
+.gi-buil-cafe:before {
+  content: "\e945";
+}
+.gi-buil-church:before {
+  content: "\e946";
+}
+.gi-buil-city:before {
+  content: "\e947";
+}
+.gi-buil-city-hall:before {
+  content: "\e948";
+}
+.gi-buil-electric-tower:before {
+  content: "\e949";
+}
+.gi-buil-factory:before {
+  content: "\e94a";
+}
+.gi-buil-ferris-wheel:before {
+  content: "\e94b";
+}
+.gi-buil-fire-hydrant:before {
+  content: "\e94c";
+}
+.gi-buil-fountain:before {
+  content: "\e94d";
+}
+.gi-buil-hospital:before {
+  content: "\e94e";
+}
+.gi-buil-hot-dog:before {
+  content: "\e94f";
+}
+.gi-buil-house2:before {
+  content: "\e950";
+}
+.gi-buil-monument:before {
+  content: "\e951";
+}
+.gi-buil-phone-booth:before {
+  content: "\e952";
+}
+.gi-buil-pointer:before {
+  content: "\e953";
+}
+.gi-buil-police:before {
+  content: "\e954";
+}
+.gi-buil-school:before {
+  content: "\e955";
+}
+.gi-buil-shop:before {
+  content: "\e956";
+}
+.gi-buil-shop-1:before {
+  content: "\e957";
+}
+.gi-buil-shop-2:before {
+  content: "\e958";
+}
+.gi-buil-signboard:before {
+  content: "\e959";
+}
+.gi-buil-skyscrapper:before {
+  content: "\e95a";
+}
+.gi-buil-skyscrapper-1:before {
+  content: "\e95b";
+}
+.gi-buil-street-light:before {
+  content: "\e95c";
+}
+.gi-buil-street-light-1:before {
+  content: "\e95d";
+}
+.gi-buil-traffic-light:before {
+  content: "\e95e";
+}
+.gi-buil-traffic-sign:before {
+  content: "\e95f";
+}
+.gi-buil-bar:before {
+  content: "\e960";
+}
+.gi-buil-bathtub:before {
+  content: "\e961";
+}
+.gi-buil-bedroom:before {
+  content: "\e962";
+}
+.gi-buil-bellboy:before {
+  content: "\e963";
+}
+.gi-buil-booking:before {
+  content: "\e964";
+}
+.gi-buil-clothes:before {
+  content: "\e965";
+}
+.gi-buil-coffee:before {
+  content: "\e966";
+}
+.gi-buil-email:before {
+  content: "\e967";
+}
+.gi-buil-golf:before {
+  content: "\e968";
+}
+.gi-buil-gym:before {
+  content: "\e969";
+}
+.gi-buil-hotel:before {
+  content: "\e96a";
+}
+.gi-buil-hotel-1:before {
+  content: "\e96b";
+}
+.gi-buil-house3:before {
+  content: "\e96c";
+}
+.gi-buil-key:before {
+  content: "\e96d";
+}
+.gi-buil-lift:before {
+  content: "\e96e";
+}
+.gi-buil-luggage:before {
+  content: "\e96f";
+}
+.gi-buil-no-smoking:before {
+  content: "\e970";
+}
+.gi-buil-relax:before {
+  content: "\e971";
+}
+.gi-buil-restaurant:before {
+  content: "\e972";
+}
+.gi-buil-room-service:before {
+  content: "\e973";
+}
+.gi-buil-room-service-1:before {
+  content: "\e974";
+}
+.gi-buil-room-service-2:before {
+  content: "\e975";
+}
+.gi-buil-room-service-3:before {
+  content: "\e976";
+}
+.gi-buil-safebox:before {
+  content: "\e977";
+}
+.gi-buil-smartphone:before {
+  content: "\e978";
+}
+.gi-buil-smartphone-1:before {
+  content: "\e979";
+}
+.gi-buil-smartphone-2:before {
+  content: "\e97a";
+}
+.gi-buil-swimming-pool2:before {
+  content: "\e97b";
+}
+.gi-buil-taxi:before {
+  content: "\e97c";
+}
+.gi-buil-water-tap:before {
+  content: "\e97d";
+}

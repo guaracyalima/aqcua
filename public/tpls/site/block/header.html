@@ -1,0 +1,44 @@
+<header>
+    <div class="cd-logo">
+        <a href="#0">
+            <img src="img/logo.svg" alt="Logo">
+        </a>
+    </div>
+    <nav class="cd-main-nav-wrapper">
+        <ul class="cd-main-nav">
+            <li ng-class="{ active: isActive('/home')}"><a href="#home">Home</a></li>
+            <li ng-class="{ active: isActive('/empresa')}"><a href="#empresa">Empresa</a></li>
+            <li ng-class="{ active: isActive('/servicos')}" class="navdrop">
+                <a href="#0" class="cd-subnav-trigger" ng-click="subTrigger($event)">
+                    <span>Servi<span class="min-size">ç</span>os <i class="fa fa-angle-down"></i></span>
+                </a>
+                <ul>
+                    <li class="go-back" ng-click="goBack($event)"><a href="#0">Menu</a></li>
+                    <li><a href="#0">Category 1</a></li>
+                    <li><a href="#0">Category 2</a></li>
+                    <li><a href="#0">Category 3</a></li>
+                    <li><a href="#0">Category 4</a></li>
+                    <li><a href="#0">Category 5</a></li>
+                    <li><a href="#0" class="placeholder">Placeholder</a></li>
+                </ul>
+            </li>
+            <li ng-class="{ active: isActive('/produtos')}" class="navdrop">
+                <a href="#0" class="cd-subnav-trigger" ng-click="subTrigger($event)">
+                    <span>Produtos <i class="fa fa-angle-down"></i></span>
+                </a>
+                <ul>
+                    <li class="go-back" ng-click="goBack($event)"><a href="#0">Menu</a></li>
+                    <li><a href="#0">Category 1</a></li>
+                    <li><a href="#0">Category 2</a></li>
+                    <li><a href="#0">Category 3</a></li>
+                    <li><a href="#0">Category 4</a></li>
+                    <li><a href="#0">Category 5</a></li>
+                    <li><a href="#0" class="placeholder">Placeholder</a></li>
+                </ul>
+            </li>
+            <li ng-class="{ active: isActive('/contato')}"><a ng-href="#contato">Contato</a></li>
+        </ul> <!-- .cd-main-nav -->
+    </nav> <!-- .cd-main-nav-wrapper -->
+    
+    <a ng-click="navTrigger($event)" class="cd-nav-trigger">Menu<span></span></a>
+</header>

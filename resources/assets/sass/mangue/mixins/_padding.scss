@@ -1,0 +1,32 @@
+
+@mixin padding( $type, $val, $mutiple ){
+
+    @if $type == left {
+        .pl-0 { padding-left: 0px !important; }
+        @for $i from 1 through $val {
+            .pl-#{$i} { padding-left: #{$mutiple * $i}px !important; }
+        }
+
+    } @else if $type == right {
+        .pr-0 { padding-right: 0px !important; }
+        @for $i from 1 through $val {
+            .pr-#{$i} { padding-right: #{$mutiple * $i}px !important; }
+        }
+    } @else if $type ==  top{
+        .pt-0 { padding-top: 0px !important; }
+        @for $i from 1 through $val {
+            .pt-#{$i} { padding-top: #{$mutiple * $i}px !important; }
+        }
+    } @else if $type ==  bottom{
+        .pb-0 { padding-bottom: 0px !important; }
+        @for $i from 1 through $val {
+            .pb-#{$i} { padding-bottom: #{$mutiple * $i}px !important; }
+        }
+    } @else {
+        .p-0 { padding: 0px !important; }
+        @for $i from 1 through $val {
+            .p-#{$i} { padding: #{$mutiple * $i}px !important; }
+        }
+    }
+
+}

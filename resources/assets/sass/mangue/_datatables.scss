@@ -1,0 +1,61 @@
+// DATA TABLES BTN
+.dataTables_wrapper{
+    display: block;
+    padding-bottom: 50px;
+    .datatables-action-buttons{
+        margin-bottom: 20px;
+    }
+    .dataTables_length{
+        label{
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: inherit;
+            
+            select{
+                margin-right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    .dataTables_filter{
+        label{
+            strong{
+                margin-right: 10px;
+                text-transform: inherit;
+            }
+            .input-sm{
+                height: 30px !important;
+                padding: 5px 10px !important;
+                line-height: 1.5;
+            }
+        }
+    }
+    .dataTables_info{
+        width: 39.9%;
+        display: block;
+        float: left;
+        color: #9A9A9A;
+        font-weight: 400;
+    }
+    // table.dataTable{
+    //     thead{
+    //         tr:last-child > th {
+    //             text-align: center !important;
+    //         }
+    //     }
+    // }
+    .dataTables_paginate{
+        width: 60%;
+        display: block;
+        float: right;
+        // font-weight: 400;
+        .pagination{
+            float: right;
+        }
+    }
+    // IMG TABLES
+    .img-table{
+        height: 60px;
+        width: auto;
+    }
+}

@@ -1,0 +1,19 @@
+<!--Meet The Doc Box-->
+<div class="owl-carousel owl-theme" ng-controller="HomeAcquaMedCtrl">
+    <div class="item" ng-repeat="ow in carousel" ng-click="showTeam(ow.id);">
+        <a class="box-team box-eff">
+            <div class="img-wrap">
+                <img ng-src="{{ow.img}}" class="img-responsive" alt="{{ow.name}}">
+                <div class="team-info">
+                    <span>Saiba mais</span>
+                    <i class="fa fa-link"></i>
+                </div>
+            </div>
+            <div class="doc-main-info">
+                <h4>{{ow.initials}} {{ow.name}} - {{ow.id}}</h4>
+                <span class="team-role">{{ow.role}}</span>
+            </div>
+        </a>
+    </div> 
+    
+</div>

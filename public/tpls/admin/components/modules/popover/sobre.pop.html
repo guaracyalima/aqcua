@@ -1,0 +1,25 @@
+<div class="popover-title">
+    <a class="popover-close" ng-click="box.popover = !box.popover">
+        <i class="fa fa-times"></i>
+    </a>
+    <div class="popover-title-text">Selecione um Icone</div>
+    <div class="popover-title-search">
+        <input type="text" ng-model="iconSearch" placeholder="Pesquisar ...">
+        <i class="fa fa-search"></i>
+    </div>
+</div>
+<div class="row content-popover">
+    <div class="iconpicker">
+        <div class="iconpicker-items">
+            <a class="iconpicker-item" 
+                data-ng-repeat="ico in icons | filter: iconSearch"
+                data-ng-click="
+                    sobreForm.boxsIcon.$rollbackViewValue();
+                    boxs.icon = ico.icon; 
+                    box.popover = !box.popover
+                ">
+                <i ng-class="ico.icon"></i>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="AcqSobreCtrl">
+    
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa fa-pencil-square-o"></i>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        
+        <!-- Horizontal Form -->
+        <form name="sobreForm" novalidate>
+            <div class="panel-body">    
+                <div class="row">
+                    <div class="form-group col-lg-12 col-md-12 col-xs-12" ng-class="{ 'error' : sobreForm.title.$invalid && !sobreForm.title.$pristine }">
+                        <label>Titulo</label>
+                        <input type="text" class="form-control"  placeholder="Titulo ..." ng-model="sobre.title" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-xs-12" ng-class="{ 'error' : sobreForm.title.$invalid && !sobreForm.title.$pristine }">
+                        <label>Subtitulo</label>
+                        <input type="text" class="form-control"  placeholder="Subtitulo ..." ng-model="sobre.subtitle" required>
+                        <input type="hidden" ng-model="sobre.id" />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <div text-angular ng-model="sobre.content.content" ta-toolbar="taConf" ta-toolbar-button-class="btn-fill btn-sm" class="ta-min-height-100 ta-height-100"></div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <label>Imagem</label>
+                        <div class="input-flat-file">
+                            <input type="file" ng-jcrop-input="upload" />
+                            <a class="btn-file">Upload de imagem</a>
+                        </div>
+                        <div class="row" ng-if="!obj.src">
+                            <div class="col-lg-6">
+                                <img ng-src="{{sobre.content.img}}" class="img-responsive">
+                            </div>
+                        </div>
+                        <div ng-jcrop="obj.src" ng-jcrop-config-name="upload" selection="obj.selection" thumbnail="obj.thumbnail" class="jcrop-box-float"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="save()" type="button" class="btn btn-success btn-fill pull-left" ng-disabled="sobreForm.$invalid">Salvar</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

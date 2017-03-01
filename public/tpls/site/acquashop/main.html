@@ -1,0 +1,21 @@
+<!-- ======== INI HEADER ======== -->
+<header id="header-shop" ng-include='"tpls/site/acquashop/header.html"'></header>
+<!-- ======== END HEADER ======== -->
+<!-- ======== INI NAV ======== -->
+<div dts-nav-fix="" dt-nav="navAcquaShop" ng-hide="loading"></div>
+<!-- ======== END NAV ======== -->
+
+<!-- ======== INI MAIN ======== -->
+<main class="main-acquashop" ng-class="{'visible': !loading}" ui-view></main>
+<!-- ======== END MAIN ======== -->
+
+<div id="cart-shop" dts-cart="" dt-cart="dataCartShop" template="shop"></div>
+<!-- ======== INI FOOTER ======== -->
+<!--<div ng-include='"tpls/site/block/footer-group.html"'></div>-->
+<!-- ======== END FOOTER ======== -->
+
+<div class="clearfix"></div>
+
+<!-- ======== INT FOOTER ======== -->
+<footer id="footer-acquashop" class="pt-0" ng-include="'tpls/site/acquashop/shop-footer.html'"></footer>
+<!-- ======== END FOOTER ======== -->

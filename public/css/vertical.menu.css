@@ -1,0 +1,132 @@
+/**
+ * AngularJS Application
+ * @author Arthur Costa <root.arthur@gmail.com>
+ */
+
+.header-left .navbar-default .navbar-brand img {
+    height: 34px;
+}
+
+@media (min-width: 768px) {
+  .colorbase{
+      color: #C0392B;
+      color: #96281B;
+      color: #F1A9A0;
+      color: #22313F;
+      color: #34495E;
+      color: #E4F1FE;
+  }
+
+
+  .header-left {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 9999;
+    background: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .header-left {
+    left: 0;
+    box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-left .container {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .header-left .navbar-default {
+    background: #fff;
+    margin: 0px;
+    border: none;
+  }
+
+  .header-left .navbar-default .navbar-nav > .active > a, 
+  .header-left .navbar-default .navbar-nav > .active > a:focus, 
+  .header-left .navbar-default .navbar-nav > .active > a:hover {
+    color: #C0392B;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header-left .navbar-default .navbar-nav > li a{
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .header-left .navbar-default .navbar-nav > li a, 
+  .header-left .navbar-header {
+    margin-bottom: 10px;
+    display: block;
+    float: none;
+  }
+
+  .header-left .navbar-default .navbar-brand {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  .header-left .navbar-default .navbar-brand img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 50px;
+  }
+
+  .header-left .navbar-nav {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .header-left .dropdown-menu {
+    left: 100%;
+    top: 0;
+    padding: 0px;
+    min-width: 200px;
+  }
+
+  .header-left .navbar-nav > li > a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+  }
+
+  .header-left .navbar-nav > li {
+    float: none;
+  }
+
+  .sidebar-contacts a {
+    color: #aeaeae;
+  }
+  .sidebar-contacts a:hover {
+    color: #C0392B;
+    text-decoration:none;
+  }
+  .sidebar-contacts p{
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    padding: .5em;
+    margin-left: 1.5em;
+    width: calc( 100% - 1em );
+    display: block;
+    text-align: left;
+  }
+  .sidebar-contacts p i {
+    margin-right: 10px;
+    font-size: 1.6rem;
+  }
+  .sidebar-contacts .top-social li a {
+    font-size: 1.6rem;
+    padding: .5em 1.2em 1.2em 1.2em;
+    display: block;
+  }

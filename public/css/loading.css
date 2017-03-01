@@ -1,0 +1,41 @@
+
+main.svg-show{
+  transition: all 0.8s ease;
+  -webkit-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+main:not(.svg-show) {
+  opacity: 1;
+}
+.content-loading{
+    transition: all 2s ease;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    margin-top: 0px;
+}
+
+.content-loading:not(.svg-show){
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: #FFF;
+}
+.content-loading.svg-show{
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    background: #FFF;
+}
+svg.loading-bubbles {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width:86px; 
+    height:86px;
+    fill: #C0392B;
+}

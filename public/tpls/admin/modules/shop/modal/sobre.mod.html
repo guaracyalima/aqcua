@@ -1,0 +1,72 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="ShopSobreCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa fa-pencil-square-o"></i>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        
+        <!-- Horizontal Form -->
+        <form name="sobreForm" novalidate>
+            <div class="panel-body">    
+                <div class="row">
+                    <uib-tabset active="activeForm">
+                        <uib-tab index="0">
+                            <uib-tab-heading>
+                                <i class="fa fa-cube"></i> Cabeçalho Sobre
+                            </uib-tab-heading>
+                            <div class="content pt-20 pl-20 pr-20">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                        <div class="form-group" ng-class="{ 'error' : servicosForm.sobre.title.$invalid && !servicosForm.sobre.title.$pristine }">
+                                            <label>Titulo</label>
+                                            <input type="text" class="form-control"  placeholder="Titulo ..." ng-model="sobre.title" required>
+                                            <input type="hidden" ng-model="sobre.id" />
+                                            <input type="hidden" ng-model="sobre.content.id" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                        <div class="form-group" ng-class="{ 'error' : servicosForm.sobre.subtitle.$invalid && !servicosForm.sobre.subtitle.$pristine }">
+                                            <label>Subtitulo</label>
+                                            <input type="text" class="form-control"  placeholder="Subtitulo ..." ng-model="sobre.subtitle" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label class="control-label text-left">Conteudo:</label>
+                                        <div text-angular data-ng-model="sobre.content.content" ta-toolbar="taConf" ta-toolbar-button-class="btn-fill btn-sm" class="ta-min-height-150 ta-height-150"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </uib-tab>
+                        <uib-tab index="1">
+                            <uib-tab-heading>
+                                <i class="fa fa-cubes"></i> Box Sobre
+                            </uib-tab-heading>
+                                <div class="content pt-20 pl-20 pr-20" ng-include="'tpls/admin/modules/forms/sobre.form.html'"></div>
+                        </uib-tab>
+                    </uib-tabset>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="save()" type="button" class="btn btn-success btn-fill pull-left" ng-disabled="servicosForm.$invalid">Salvar</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

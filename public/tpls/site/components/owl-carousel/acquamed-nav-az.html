@@ -1,0 +1,11 @@
+<div class="owl-carousel owl-theme owl-alp-nav">
+        
+    <!-- <div class="item" ng-repeat="ow in carousel track by ow.value | orderBy:'+value'" data-hash={{$index}}> -->
+    <!-- <div class="item" ng-click="activateLetter('')" ng-class="{'on-active':''==acLetter}">
+    Todos
+    </div> -->
+    <div class="item" ng-repeat="ow in carousel" ng-click="activateLetter(ow.value)" ng-class="{'on-active':ow.value==acLetter}">
+        {{ow.value}}
+    </div> 
+    
+</div>

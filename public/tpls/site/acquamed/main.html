@@ -1,0 +1,16 @@
+<!-- ======== INI HEADER ======== -->
+<header id="header-med" ng-include='"tpls/site/acquamed/header.html"'></header>
+<!-- ======== END HEADER ======== -->
+<!-- ======== INI NAV ======== -->
+<div dts-nav-fix="" dt-nav="navAcquaMed" ng-hide="loading"></div>
+<!-- ======== END NAV ======== -->
+
+<!-- ======== INI MAIN ======== -->
+<main class="main-acquamed" ng-class="{'visible': !loading}" ui-view></main>
+<!-- ======== END MAIN ======== -->
+    
+<div class="clearfix"></div>
+
+<!-- ======== INT FOOTER ======== -->
+<footer id="footer-acquamed" class="pt-0" ng-include="'tpls/site/acquamed/med-footer.html'"></footer>
+<!-- ======== END FOOTER ======== -->

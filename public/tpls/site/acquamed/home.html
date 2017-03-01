@@ -1,0 +1,433 @@
+<div id="acquaMed">
+    <section id="home" class="content-carousel">
+        <div uib-carousel active="slides.active" interval="slides.interval" no-wrap="slides.noWrapSlides">
+            <div uib-slide ng-repeat="slide in pages.slider" index="$index">
+                <img ng-src="{{slide.img}}" class="img-responsive" style="margin:auto;">
+            </div>
+        </div>
+    </section>
+
+    <section id="subhome">
+        <div class="container">
+            <div class="row">
+                <!-- box left -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="wrap-box1">
+                        <h1 class="box-title">
+                            <span>{{pages.sobre.subtitle}}</span>
+                            <br/>{{pages.sobre.title}}
+                        </h1>
+                        <p class="box-content text-content" ng-bind-html="pages.sobre.content[0].content"></p>
+                    </div>
+                </div>
+                <!-- box right -->
+                <div ng-repeat="box in pages.sobre.content[0].box track by box.seq" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="wrap-box1">
+                        <h3>
+                            <i ng-class="box.icon"></i>
+                            <strong ng-bind-html="box.title"></strong>
+                        </h3>
+                        <p class="box-content text-content" ng-bind-html="box.content"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+
+        <div class="sp-title">
+            <div class="container">
+                <!--<h2 class="sp-h2" ng-bind-html="pages.blog.title"></h2>-->
+                <h2 class="sp-h2">Notícias <span>&amp;</span> Novidades</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div   
+                    dts-owlcarousel="" 
+                    oc-options="blogOption" 
+                    oc-data="pages.blog"
+                    template="acquamed-blog"
+                ></div> 
+            </div>
+        </div>
+    </section>
+
+    <section id="especialidades">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2" ng-bind-html="pages.servicos.title"></h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="box-title-espc">
+                        <i class="gi-me gi-me-medical-history"></i>
+                        Especialidades
+                    </div>
+                    <div class="box-filter">
+                        <div class="header-filter">
+                            
+                            <div class="search-field control-group control-odd">
+                                <input type="text" class="form-control" ng-model="letterSearch" placeholder="Pesquisar ...">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="nav-filter">
+                            <div class="btn-all-filter">
+                                <a ng-click="allLetter()">Todos</a>
+                            </div>
+                            <div class="oc-filter"  
+                                dts-owlcarousel="" 
+                                oc-options="navOption" 
+                                oc-data="alpNav"
+                                template="acquamed-nav-az"
+                            ></div> 
+                        </div>
+                        <div class="espc-filter">
+                            <ul>
+                                <li ng-repeat="cat in medCat | filterLetter : acLetter | filter: letterSearch">
+                                    <a ng-click="getMedServices(cat.id)">
+                                        {{cat.name}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="box-title-espc">
+                        <i class="gi-me gi-me-surgeon"></i>
+                        Serviços
+                    </div>
+                    <div class="box-desc-espc" ng-if="servicos.name" ng-include="'tpls/site/acquamed/servicos.html'"></div>
+                    <div class="box-desc-espc-empty" ng-if="!servicos.name">
+                        <h4 class="border-title title-empty">Especialidades Clínicas</h4>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <i class="fa fa-angle-double-left icon-empty"></i>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <h4 class="content-empty">
+                                    <span>1.</span> 
+                                    Confira todas nossas especialidades selecione um item da lista ao lado.
+                                </h4>
+                                <h4 class="content-empty">
+                                    <span>2.</span> 
+                                    Veja detalhes da especialidade escolhida.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section id="equipe">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2" ng-bind-html="pages.profissionais.title"></h2>
+            </div>
+        </div>
+        <div class="line-tab"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <uib-tabset class="clinic-tabs tab-animation" active="active">
+                        <uib-tab index="$index" data-ng-repeat="tab in pages.profissionais.tab track by $index" disable="tab.disabled">
+                            <uib-tab-heading>
+                                <i class="tab-icon" ng-class="tab.icon"></i>
+                                <span>{{tab.name}}</span> 
+                            </uib-tab-heading>
+                            <div class="tab-pane">
+                                <div class="row">
+                                    <div   
+                                        dts-owlcarousel="" 
+                                        oc-options="sliderOption" 
+                                        oc-data="tab.team"
+                                        template="acquamed-team"
+                                    ></div> 
+                                </div>
+
+                            </div>
+                        </uib-tab>
+                    </uib-tabset>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2">Galeria</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div   
+                dts-owlcarousel="" 
+                oc-options="blogOption" 
+                oc-data="pages.galerias"
+                template="acquashop-galeria"
+                ></div> 
+            </div>
+        </div> 
+    </section>
+
+    <section id="contato">
+        <div class="sp-title">
+            <div class="container">
+                <h2 class="sp-h2" ng-bind-html="pages.contato.title"></h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-60">
+            
+                <div class="col-lg-12 col-md-12 col-lg-12 col-sm-12 col-xs-12 mb-30">
+                    <p class="text-content block-two">
+                        Se você deseja entrar em contato com o AcquaMed para enviar sugestões ou obter alguma informação, utilize o formulário de contato abaixo
+Os itens marcados com "*" são obrigatórios.
+                    </p>
+                </div>
+
+                <div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 pr-45">
+
+                    <h4 class="border-title ng-binding">
+                        Formulario de <span>Contato<span id="transmark" style="display: none; width: 0px; height: 0px;"></span></span>
+                    </h4>
+
+                    <!--Form Start-->
+                    <form id="contactForm" novalidate="novalidate">
+                        <!-- Name Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group control-odd">
+                                <i class="fa fa-user"></i>
+                                <input class="form-control" placeholder="Nome *" name="name" id="name" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Email Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-envelope-o"></i>
+                                <input class="form-control" placeholder="E-mail *" name="email" id="email" type="email">
+                            </div>
+                        </div>
+                        
+                        <!-- Whatsapp Text Box -->
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-whatsapp"></i>
+                                <input class="form-control" placeholder="Whatsapp" name="whatsapp" id="whatsapp" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Telefone Text Box-->
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 not-pad">
+                            <div class="contato-field control-group pl-15">
+                                <i class="fa fa-mobile"></i>
+                                <input class="form-control" placeholder="Telefone ou Celular *" name="phone" id="phone" type="text">
+                            </div>
+                        </div>
+                        
+                        <!-- Subject Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <i class="fa fa-pencil-square-o"></i>
+                                <input class="form-control" placeholder="Assunto *" name="subject" id="subject" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Message Text Box -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field control-group">
+                                <textarea class="form-control tarea" placeholder="Mensagem *" name="message" id="message"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 not-pad">
+                            <div class="contato-field main-but">
+                                <div class="inner-out-button">
+                                    <button class="button-dark button2 pull-right" data-loading-text="Enviando..." type="submit">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </form><!-- Form End -->
+                </div>
+
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 pr-45">
+
+                    <h4 class="border-title ng-binding">
+                        Mais <span>informações<span id="transmark" style="display: none; width: 0px; height: 0px;"></span></span>
+                    </h4>
+                    
+                    <div class="panel-group mt-25 panel-contact" id="accordion">
+
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.contacts">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c1 = !c1">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-phone"></i> Telefones
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': c1, 'fa-angle-down ': !c1 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="c1" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="co in pages.contato.info.contacts track by co.seq">
+                                            <i class="icon-desc" ng-if="co.type.icon" ng-class="co.type.icon"></i>
+                                            <span ng-if="co.code">{{co.code}}</span>
+                                            <span>{{co.number_id}}</span>
+                                            <span ng-if="co.type.operators">( {{co.type.operators}} )</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.emails">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c2 = !c2">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-envelope-o"></i> E-mails
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c2, 'fa-angle-down ': c2 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c2" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="em in pages.contato.info.emails track by em.seq">
+                                            <span ng-if="em.desc">( {{em.desc}} )</span>
+                                            <span>{{em.email}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default" ng-if="pages.contato.info.business_hours">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c3 = !c3">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-clock-o"></i> Horários
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c3, 'fa-angle-down ': c3 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c3" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="bh in pages.contato.info.business_hours track by bh.seq">
+                                            <i class="icon-desc" ng-if="bh.icon" ng-class="bh.icon"></i>
+                                            <span ng-bind-html="bh.desc"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default" ng-if="pages.contato.info.address">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c4 = !c4">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-map-o"></i> Endereço
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c4, 'fa-angle-down ': c4 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c4" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="ad in pages.contato.info.address track by ad.seq">
+                                            <i class="icon-desc" ng-if="ad.icon" ng-class="ad.icon"></i>
+                                            <span ng-if="ad.country" ng-bind-html="ad.country"></span> -
+                                            <span ng-if="ad.state" ng-bind-html="ad.state"></span> / 
+                                            <span ng-if="ad.neighborhood" ng-bind-html="ad.neighborhood"></span>
+                                            <p>
+                                                <span ng-if="ad.street"><strong>Rua:</strong> {{ad.street}}</span> 
+                                            </p>
+                                            <p>
+                                                <span ng-if="ad.number"><strong>Nº:</strong> {{ad.number}}</span> 
+                                            </p>
+                                            <p>
+                                                <span ng-if="ad.zip_code"><strong>Cep:</strong> {{ad.zip_code}}</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-default" ng-if="pages.contato.info.social">
+                            <div class="panel-heading" role="tab" id="headingOne" ng-click="c5 = !c5">
+                                <h4 class="panel-title">
+                                    <i class="fa fa-share-square-o"></i> Redes Sociais
+                                    <i class="pull-right fa" ng-class="{'fa-angle-right ': !c5, 'fa-angle-down ': c5 }"></i>
+                                </h4>
+                            </div>
+                            <div uib-collapse="!c5" class="panel-collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li ng-repeat="so in pages.contato.info.social track by so.seq">
+                                            <a ng-href="{{so.link}}" target="_blank">
+                                                <i class="icon-desc" ng-if="so.icon" ng-class="so.icon"></i>
+                                                <span ng-if="so.name">({{so.name}})</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+        ==========================================================
+        MAPS
+        ==========================================================
+    -->
+    <section id="mapsMed" class="container-fluid pl-0 pr-0">
+        <div class="row-fluid">
+            <div dts-maps="" data-options="confMaps"></div>
+        </div>
+    </section>
+    
+</div>
+
+<style type="text/css">
+    #acquaMed #galeria {
+        background: #efefef;
+        padding-top: 0px;
+        padding-bottom: 45px;
+        float: left;
+        width: 100%;
+    }
+    #acquaMed #galeria .sp-title {
+        text-align: center;
+        padding-top: 90px;
+        padding-bottom: 60px;
+    }
+    #acquaMed #galeria h2.sp-h2 {
+        position: relative;
+        display: table;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 2em;
+        color: #616161;
+        text-transform: inherit;
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-bottom: 3px solid #1E8BC3;
+        margin: 0 auto;
+    }
+</style>

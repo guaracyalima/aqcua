@@ -1,0 +1,58 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="AcqServCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <i class="fa fa-pencil-square-o"></i>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+     <!-- Formulário Corpo -->
+    <div class="modal-body">
+        
+        <!-- Horizontal Form -->
+        <form name="servForm" novalidate>
+            <div class="panel-body">    
+                <div class="row">
+                    <!-- Line 1 -->
+                    <div class="form-group col-md-4">
+                        <label class="control-label text-left">Especialidade:</label>
+                        <div class="pl-0 ml-0">
+                            <ui-select ng-model="serv.hs_id" theme="bootstrap">
+                                <ui-select-match placeholder="Selecione ">{{$select.selected.name}}</ui-select-match>
+                                <ui-select-choices repeat="item.id as item in espec | filter: $select.search">
+                                    <span ng-bind-html="item.name | highlight: $select.search"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <input type="hidden" ng-model="serv.id">
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label class="control-label text-left">Serviço:</label>
+                        <input type="text" class="form-control"  placeholder="Serviço ..." ng-model="serv.name">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label class="control-label text-left">Descrição:</label>
+                        <div text-angular ng-model="serv.desc" ta-toolbar="taConf" ta-toolbar-button-class="btn-fill btn-sm" class="ta-min-height-100 ta-height-100"></div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="save()" type="button" class="btn btn-success btn-fill pull-left" ng-disabled="servForm.$invalid">Salvar</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default btn-fill pull-left">Fechar</button>
+    </div>
+
+</div>

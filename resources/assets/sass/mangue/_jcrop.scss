@@ -1,0 +1,49 @@
+.input-flat-file{
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+    overflow: hidden;
+    *{
+        display: inline;
+    }
+    // Magic
+    input[type=file]{
+        cursor: pointer;
+        padding: 10px 20px;
+        opacity: 0;
+        display: inline-block;
+        position: relative;
+        position: absolute;
+        left: 10px;
+        z-index: 8;
+    }
+    .btn-file{
+        border: 2px solid;
+        border-radius: 4px;
+        color: blue;
+        display: inline-block;
+        padding: 10px 20px;
+        position: absolute;
+        left: 10px;
+        z-index: 2;
+    }
+}
+
+.jcrop-box-float{
+    .ng-jcrop{
+        padding: 20px;
+        .ng-jcrop-image-wrapper{
+            position: relative;
+            display: block;
+            float: left;
+            width: 50%;
+        }
+        .ng-jcrop-thumbnail-wrapper{
+            position: relative;
+            display: block;
+            float: left;
+            width: 40%;
+        }
+    }
+}
+

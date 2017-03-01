@@ -1,0 +1,52 @@
+@mixin height( $type, $val, $mutiple ){
+
+    @if $type == min {
+        .min-height-0 { min-height: 0px !important; }
+        @for $i from 1 through $val {
+            .min-height-#{$i} {  min-height: #{$mutiple * $i}px !important; }
+        }
+
+    } @else if $type == max {
+        .max-height-0 { max-height: 0px !important; }
+        @for $i from 1 through $val {
+            .max-height-#{$i} {  max-height: #{$mutiple * $i}px !important; }
+        }
+    } @else {
+        .height-0 { height: 0px !important; }
+        @for $i from 1 through $val {
+            .height-#{$i} {  height: #{$mutiple * $i}px !important; }
+        }
+    }
+}
+
+@mixin heightAngularText( $type, $val, $mutiple ){
+    @if $type == 'min' {
+        .ta-min-height-0{
+            .ta-editor{ min-height: 0px !important; }
+            .ta-scroll-window > .ta-bind{
+                min-height: 0px !important;
+            }
+        } 
+        @for $i from 1 through $val {
+            .ta-min-height-#{$mutiple * $i}{
+                .ta-editor{  
+                    min-height: #{$mutiple * $i}px !important; 
+                }
+                .ta-scroll-window > .ta-bind{
+                    min-height: #{ ($mutiple * $i) - 10 }px !important; 
+                }
+            } 
+        }
+
+    } @else if $type == 'max' {
+        .ta-max-height-0 .ta-editor{ max-height: 0px !important; }
+        @for $i from 1 through $val {
+            .ta-max-height-#{$mutiple * $i} .ta-editor{  max-height: #{$mutiple * $i}px !important; }
+        }
+    } @else {
+        .ta-height-0 .ta-editor{ height: 0px !important; }
+        @for $i from 1 through $val {
+            .ta-height-#{$mutiple * $i} .ta-editor{  height: #{$mutiple * $i}px !important; }
+        }
+    }
+}

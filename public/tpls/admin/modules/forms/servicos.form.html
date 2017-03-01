@@ -1,0 +1,47 @@
+<div class="row" data-ng-repeat="boxs in boxContent">
+    <div class="col-md-10">
+        <div class="row card ml-0 mr-0 pl-0 pr-0">
+            <div class="header"></div>
+            <div class="content">
+                <div class="form-group col-md-2">
+                    <label>Icon</label>
+                    <div class="input-group popover-icon">
+                        <a class="btn btn-default" data-ng-click="box.popover = !box.popover" >
+                            <i ng-class="!boxs.icon ? 'fa fa-archive' : boxs.icon"></i>
+                        </a>
+                        <div class="iconpicker-popover"
+                                    uib-popover-template="'tpls/admin/components/modules/popover/servicos.pop.html'"
+                                    popover-placement="bottom"
+                                    popover-trigger="'focus'"
+                                    popover-is-open="box.popover"
+                        ></div>
+                    </div>
+                    <input type="hidden" name="boxsIcon" data-ng-model="boxs.icon" ng-model-options="{ debounce: 1000 }">
+                    <input type="hidden" data-ng-model="boxs.id" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label class="control-label text-left">Sequência:</label>
+                    <input type="number" class="form-control" mask="9?9?9?9" data-ng-maxlength="4" placeholder="Ordernar ..." data-ng-model="boxs.seq">
+                </div>
+                <div class="form-group col-md-8">
+                    <label class="control-label text-left">Title:</label>
+                    <input type="text" class="form-control"  placeholder="Titulo ..." data-ng-model="boxs.title">
+                </div>
+                <div class="form-group col-md-12">
+                    <label class="control-label text-left">Conteudo:</label>
+                    <div text-angular data-ng-model="boxs.content" ta-toolbar="taConf" ta-toolbar-button-class="btn-fill btn-sm" class="ta-min-height-100 ta-height-100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-2">
+        <labelfor="Excluir">Excluir Box:</label>
+        <button data-ng-click="removeItem($index)" class="btn btn-danger btn-addon delete-field-{{$index}}"><i class="fa fa-trash"></i>Deletar</button>            
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-xs-2 margin-left-15">
+        <label for="telefone">Novo Box:</label>
+        <button data-ng-click="cloneItem()" class="btn btn-success btn-addon"><i class="fa fa-plus"></i>Adicionar</button>
+    </div>
+</div>

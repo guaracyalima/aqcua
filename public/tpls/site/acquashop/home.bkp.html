@@ -1,0 +1,129 @@
+<div ng-controller="HomeAcquaShopCtrl">
+    <section id="home" class="content-carousel">
+        <div uib-carousel active="slides.active" interval="slides.interval" no-wrap="slides.noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides.lists" index="$index">
+                <img ng-src="{{slide.img}}" class="img-responsive" style="margin:auto;">
+                <div class="carousel-caption">
+                    <div class="content-title">
+                        <h2 class="t1">0{{slide.id}}</h2>
+                        <h3 class="t2"><span>Free</span> shopping !</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut iaculis, ligula at cursus bibendum, elit libero scelerisque 
+                            sapien.
+                            <!--{{slide.content}}-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container-fluid pl-0 pr-0">
+            <div class="box-img-left">
+                <a href="#">
+                    <img ng-src="{{pages.empresa.content.img}}" class="img-responsive"/>
+                    <span>Moda feminina</span>
+                    <i class="fa fa-link"></i>
+                </a>
+            </div>
+            <div class="box-content-right">
+                <h3>Moda Feminina</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed sagittis magna, ut viverra orci.
+                </p>
+                <a href="#" class="btn btn-sh">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <!-- TITLE -->
+            <div class="row"></div>
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"
+                        ng-repeat="box in pages.servicos.content.box track by box.sequence">
+                    <div class="icon-animation">
+                        <div class="wrap-box2 espec-effect">
+                            <div>
+                                <div class="icon-box2">
+                                    <i ng-class="box.icon" ></i>
+                                </div>
+                                <h4>{{box.title}}</h4>
+                                <p ng-bind-html="box.content"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promocoes">
+        <div class="container-fluid pl-0 pr-0">
+             <div id="parallax-img" 
+                  dts-parallax-img="" 
+                  dt-src="pages.promocoes.content.banner" 
+                  dt-speed="10"
+                  dt-height="60"
+                  >
+                <div class="banner-sale">
+                    <div class="container">
+                        <h3 class="subtitle">big season sale</h3>
+                        <h2 class="title">SAVE 70% OFF</h2>
+                        <p class="txt">
+                            Get the exceptional shopping experience that’s always worth the trip.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <div class="container">
+            <div class="row">
+                <!-- Itens products -->
+                <div class="product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12" data-ng-repeat="prod in products">
+                    <div 
+                        class="product-overlay-popover" 
+                        uib-popover-template="prod.template"
+                        popover-placement="right-top"
+                        popover-trigger="'focus'"
+                        popover-is-open="prod.popover">
+                    </div>
+                    <div class="product-item">
+                        <div class="wrapper-item">
+                            <div class="overlay-item"></div>
+                            <div class="img-item">
+                                <img ng-src="{{prod.img}}">
+                            </div>
+                        </div>
+                        <div class="desc-item">
+                            <div class="infor-item">
+                                <h2>{{prod.title}}</h2>
+                                <!--<h4><strong>{{prod.price.currency}}</strong>{{prod.price.amount}}</h4>-->
+                            </div>
+                            <!--<a class="btn-cart" ng-class="{'add' : toggle}" ng-click="toggle = !toggle">-->
+                            <a class="btn-cart" ng-click="addCart($event, prod)">
+                                <i class="fa shopping-basket"></i>
+                                Adicionar
+                            </a>
+                            <a class="btn-details" ng-class="{'active' : prod.popover}" ng-click="prod.popover = !prod.popover">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+
+</div>

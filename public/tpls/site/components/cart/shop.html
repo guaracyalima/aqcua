@@ -1,0 +1,126 @@
+<!-- CART -->
+<div ng-controller="CartCtrl  as vm" class="cart-container empty">
+	<a class="cart-trigger">
+		Carrinho de compras
+		<ul class="count"> <!-- cart items count -->
+            <li>{{ (!vm.cart.length ? 0 : vm.cart.length) }}</li>
+		</ul> <!-- .count -->
+	</a>
+
+	<div class="cart">
+		<div class="wrapper">
+			<header>
+				<h2>Produtos</h2>
+                <span class="undo visible" ng-show="!shopForm">
+                    <a ng-click="vm.clearCart()">
+                        Remover Todos
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </span>
+			</header>
+			
+			<div class="cart-body" ng-show="!shopForm">
+				<ul>
+					<li class="product" ng-repeat="cart in vm.cart track by cart.id">
+                        <div class="product-img">
+                            <a>
+                                <img data-ng-src="{{cart.thumbnail}}" alt="{{cart.title}}">
+                            </a>
+                        </div>
+                        <div class="product-details">
+                            <h3>{{cart.title}}</h3>
+                            <!--<span class="price">{{cart.price.currency}}{{cart.price.amount}}</span>-->
+                            <span class="price">
+                                <a class="delete-item btn btn-danger" ng-click="vm.removeCart( cart )"><i class="fa fa-trash-o"></i></a>
+                            </span>
+                            <div class="actions">
+                                <div class="quantity">
+                                    <label for="qtd">Qtd: </label>
+                                    <input 
+                                        type="number" id="qtd" 
+                                        min="1" max="100" step="1" 
+                                        ng-value="cart.qtd" 
+                                        ng-model="cart.qtd"
+                                        ng-change="vm.updateCart(cart.id, cart)"/>
+                                    <div class="quantity-nav">
+                                        <a class="quantity-button quantity-up" ng-click="vm.upQtdCart(cart.id, cart)">+</a>
+                                        <a class="quantity-button quantity-down" ng-click="vm.downQtdCart(cart.id, cart)">-</a>
+                                    </div>
+                                </div>
+                                <!--<a class="delete-item btn btn-danger" ng-click="vm.removeCart( cart )"><i class="fa fa-trash-o"></i></a>-->
+                            </div>
+                        </div>
+                    </li>
+
+				</ul>
+			</div>
+
+            <div class="cart-body mt-10" ng-show="shopForm">
+                <!--Form Start-->
+                <form name="cartForm" novalidate>
+                    <!-- Name Text Box -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <input class="form-control" placeholder="Nome *" name="name" id="name" type="text" required>
+                        </div>
+                    </div>
+                    <!-- Email Text Box -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <input class="form-control" placeholder="E-mail" name="email" id="email" type="email">
+                        </div>
+                    </div>
+                    <!-- Whatsapp Text Box -->
+                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <input class="form-control" placeholder="Whatsapp" name="whatsapp" id="whatsapp" type="text">
+                        </div>
+                    </div>
+                    <!-- Telefone Text Box-->
+                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <input class="form-control" placeholder="Telefone ou Celular *" name="phone" id="phone" type="text" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Subject Text Box -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <input class="form-control" placeholder="Assunto *" name="subject" id="subject" type="text" required>
+                        </div>
+                    </div>
+                    <!-- Message Text Box -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-5">
+                        <div class="contato-field control-group">
+                            <textarea class="form-control tarea" placeholder="Mensagem *" name="message" id="message" required></textarea>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-5">
+                        <div class="contato-field main-but">
+                            <div class="inner-out-button">
+                                <button class="button btn btn-info btn-md btn-block pull-right" ng-click="vm.checkout();"  data-loading-text="Enviando..." type="submit" ng-disabled="cartForm.$invalid"> 
+                                    Enviar Orçamento <i class="fa fa-paper-plane-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+			<footer>
+                <a ng-click="(shopForm ? shopForm =false : shopForm=true)" class="checkout btn">
+                    <em ng-if="!shopForm">
+                        Orçamento
+                    </em>
+                    <em ng-if="shopForm">
+                        Retornar a listagem
+                    </em>
+                </a>
+			</footer>
+		</div>
+	</div> <!-- .cd-cart -->
+</div> <!-- cd-cart-container -->
+
+
+

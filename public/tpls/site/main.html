@@ -1,0 +1,18 @@
+<!-- ======== INT VERTICAL MENU ======== -->
+<header class="header-left" ng-include='"tpls/site/block/verical-menu.html"'></header>
+<!-- ======== END VERTICAL MENU ======== -->
+    
+<!-- ======== INT LOADING ======== -->
+<!--<div ng-include='"assets/tpl/block/loading-bars.html"' ng-class="{'svg-show': loading}" class="content-loading"></div>-->
+<!-- ======== END LOADING ======== -->
+
+<!-- ======== INT MAIN ======== -->
+<main class="main-content main-content-left" ng-class="{'visible': !loading}" ui-view></main>
+<!-- ======== END MAIN ======== -->
+    
+<div class="clearfix"></div>
+
+<!-- ======== INT FOOTER ======== -->
+<footer class="pt-0" ng-include='"tpls/site/block/footer-group.html"'></footer>
+<!-- ======== END FOOTER ======== -->
+

@@ -1,0 +1,21 @@
+.breadcrumb-nav{
+    padding-left: 0px;
+    display: block;
+    float: left;
+    width: auto;
+    li{
+        display: block;
+        float: left;
+        list-style: none;
+        text-decoration: none;
+        a{
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            color: $dark-gray;
+            padding: 5px 10px;
+            &.bc-lf{
+                border-left: 2px $medium-gray solid;
+            }
+        }
+    }
+}

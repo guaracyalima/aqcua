@@ -1,0 +1,47 @@
+<!-- Formulário Modal -->
+<div class="modal-content" ng-controller="AcqHomeCtrl">
+    
+    <!-- Cabeçalho -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" aria-hidden="true">
+            <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span class="" aria-label="Left Align">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                {{ title }}
+            </span>
+
+        </h4>
+    </div>
+    
+    <!-- Formulário Corpo -->
+    <div class="modal-body">
+        
+        <!-- Horizontal Form -->
+        <form role="form" id="formModal" name="formModal">
+            <div class="panel-body">    
+                <div class="row">
+                    <div class="form-group col-xs-6">
+                        <label for="fuso">UF</label>
+                        <input type="text" class="form-control" ng-model="fuso.uf" id="uf" ng-disabled="fuso.uf" placeholder="Estado"/>
+                        <input type="hidden" ng-model="fuso.id" />
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="clientes" class="control-label">Shopping: </label>
+                        <select class="form-control" ng-model="fuso.id_timezone">
+                            <option ng-repeat="item in timezones" ng-selected="fuso.id_timezone === item.id" ng-value="item.id">{{item.timezone}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+        <button ng-click="save()" type="button" class="btn btn-success pull-left" ng-disabled="btnDisable">Salvar</button>
+        <button ng-click="cancel()" type="button" class="btn btn-default pull-left">Fechar</button>
+    </div>
+
+</div>

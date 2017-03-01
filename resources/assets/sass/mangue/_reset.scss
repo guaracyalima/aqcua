@@ -1,0 +1,11 @@
+// MAGIN
+@include margin( left,  100, 2 );
+@include margin( right, 100, 2 );
+@include margin( top,   100, 2 );
+@include margin( bottom,100, 2 );
+@include margin( all,   100, 2 );
+
+@include padding( left,  100, 2 );
+@include padding( right, 100, 2 );
+@include padding( top,   100, 2 );
+@include padding( all,   100, 2 );

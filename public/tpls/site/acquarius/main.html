@@ -1,0 +1,24 @@
+<!-- ======== INI HEADER ======== -->
+<header id="header-shop" ng-include='"tpls/site/acquarius/header.html"'></header>
+<!-- ======== END HEADER ======== -->
+
+<!-- ======== INI NAV ======== -->
+<div dts-nav-fix="" dt-nav="navAcquarius" ng-hide="loading"></div>
+<!-- ======== END NAV ======== -->
+
+<!-- ======== INI MAIN ======== -->
+<main class="main-acquarius" ng-class="{'visible': !loading}" ui-view></main>
+<!-- ======== END MAIN ======== -->
+
+<div class="clearfix"></div>
+
+<!-- ======== INT FOOTER ======== -->
+<footer id="footer-acquarius" class="pt-0" ng-include="'tpls/site/acquarius/acquarius-footer.html'"></footer>
+<!-- ======== END FOOTER ======== -->
+
+<script>
+    var url_atual = window.location.href;
+    console.log("Estamos em: "+url_atual);
+</script>
+
+

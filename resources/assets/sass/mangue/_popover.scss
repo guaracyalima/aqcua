@@ -1,0 +1,48 @@
+.popover-icon{
+    .popover{
+        min-width: 250px;
+        .popover-content{
+            padding: 0px !important;
+            .popover-title{
+                .popover-close{
+                    display: block;
+                    width: 30px;
+                    position: absolute;
+                    right: 0px;
+                    top: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    &, &:hover{
+                        color: #797C80;
+                    }
+                }
+                .popover-title-text{
+                    padding: 5px;
+                    text-align: center;
+                }
+                .popover-title-search{
+                    width: 100%;
+                    height: 50px;
+                    position: relative;
+                    display: block;
+                    padding: 5px;
+                    i{
+                        display: block;
+                        position: absolute;
+                        top: 18px;
+                        right: 20px;
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        .content-popover{
+            width: 250px;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            .iconpicker{
+                max-width: 270px;
+            }
+        }
+    }
+}
