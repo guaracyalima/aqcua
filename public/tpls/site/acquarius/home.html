@@ -42,10 +42,19 @@
     </div>
 </section>
 
-<section id="estrutura">
-    
-    {{ selected.value }}
 
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover"
+            title="TÉRREO" data-content="
+                Centro de Odontologia Implan Center
+com especialistas em implante, prótese, estética, endodontia, patologias, ortodontia e clínico geral.
+Café Cravo e Canela com opções de lanches rápidos e saudáveis.
+Closet Show
+Loja AcquaShop
+Toda linha de roupas brancas e fitness.
+                    ">Térreo</button>
+
+<section id="estrutura">
+    {{ selected.value }}
     <div class="sp-title">
         <div class="container">
             <h2 class="sp-h2" ng-bind-html="pages.servicos.title"></h2>
@@ -53,6 +62,7 @@
         </div>
     </div>
     <div class="container">
+
         <div class="row">
             <div class="col-md-4" style="padding-left: 0px;">
                 <nav class="nav-sobre-control">
@@ -73,7 +83,7 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 
 <!--<section id="estrutura">

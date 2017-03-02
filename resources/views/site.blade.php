@@ -115,6 +115,9 @@
     
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2W0lUy_CuqLQ2M54ImzzG5dnwBnqDmPQ" async defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
     
     
     <!-- Application Dependencies -->

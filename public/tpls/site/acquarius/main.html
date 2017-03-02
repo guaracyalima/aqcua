@@ -16,9 +16,15 @@
 <footer id="footer-acquarius" class="pt-0" ng-include="'tpls/site/acquarius/acquarius-footer.html'"></footer>
 <!-- ======== END FOOTER ======== -->
 
+
 <script>
+
     var url_atual = window.location.href;
     console.log("Estamos em: "+url_atual);
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
 </script>
 
 
