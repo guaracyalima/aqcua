@@ -9,6 +9,8 @@ class BlogController extends Controller
 {
     public function news($id)
     {
+
         return Blog::find($id);
+        
     }
 }
